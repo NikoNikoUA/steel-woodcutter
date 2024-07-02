@@ -1,1 +1,0 @@
-import{u as a,r as o,j as s}from"./index-BH1Cg9cX.js";import{B as n}from"./BackLink-DJ-SIptd.js";const m=()=>{var t;const r=a(),e=o.useRef(((t=r.state)==null?void 0:t.current)??"/categories");return s.jsxs(s.Fragment,{children:[s.jsx(n,{to:e.current}),s.jsx("div",{children:"Christmas"})]})};export{m as Christmas,m as default};
