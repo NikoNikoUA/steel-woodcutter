@@ -3,11 +3,26 @@ import { useLocation } from "react-router-dom";
 import { BackLink } from "../components/BackLink/BackLink";
 import { fetchValentineProducts } from "../utils/api";
 import { Card } from "../components/Card/Card";
+import { BasicModal } from "../components/Modal/Modal";
 
 export const Valentine = () => {
   const [valentineProducts, setValentineProducts] = useState([]);
   const location = useLocation();
   const backLinkHref = useRef(location.state?.current ?? "/categories");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const openModal = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
+    setIsModalOpen(false);
+    document.body.style.overflow = "auto";
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,10 +43,19 @@ export const Valentine = () => {
       <ul>
         {valentineProducts.map((valentineProduct) => (
           <li key={valentineProduct._id}>
-            <Card product={valentineProduct} />
+            <Card
+              product={valentineProduct}
+              openModal={() => openModal(valentineProduct)}
+            />
           </li>
         ))}
       </ul>
+      {selectedProduct && (
+        <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
+          <div>{selectedProduct.name}</div>
+          <div>{selectedProduct.description}</div>
+        </BasicModal>
+      )}
     </>
   );
 };
