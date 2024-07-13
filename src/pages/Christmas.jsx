@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { BackLink } from "../components/BackLink/BackLink";
 import { fetchChristmasProducts } from "../utils/api";
+import { Card } from "../components/Card/Card";
 
 export const Christmas = () => {
   const [christmasProducts, setChristmasProducts] = useState([]);
@@ -28,13 +29,7 @@ export const Christmas = () => {
       <ul>
         {christmasProducts.map((christmasProduct) => (
           <li key={christmasProduct._id}>
-            {christmasProduct.name}
-            <img
-              alt="angel"
-              src={`/${christmasProduct.url}`}
-              width="60"
-              height="60"
-            />
+            <Card product={christmasProducts} />
           </li>
         ))}
       </ul>

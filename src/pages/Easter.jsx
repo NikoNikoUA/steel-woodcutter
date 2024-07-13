@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { BackLink } from "../components/BackLink/BackLink";
 import { fetchEasterProducts } from "../utils/api";
+import { Card } from "../components/Card/Card";
 
 export const Easter = () => {
   const [easterProducts, setEasterProduct] = useState([]);
@@ -26,7 +27,9 @@ export const Easter = () => {
       <div>Easter</div>
       <ul>
         {easterProducts.map((easterProduct) => (
-          <li key={easterProduct._id}>{easterProduct.name}</li>
+          <li key={easterProduct._id}>
+            <Card product={easterProduct} />
+          </li>
         ))}
       </ul>
     </>

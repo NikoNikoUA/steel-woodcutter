@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { BackLink } from "../components/BackLink/BackLink";
 import { fetchValentineProducts } from "../utils/api";
+import { Card } from "../components/Card/Card";
 
 export const Valentine = () => {
   const [valentineProducts, setValentineProducts] = useState([]);
@@ -26,7 +27,9 @@ export const Valentine = () => {
       <div>Valentine</div>
       <ul>
         {valentineProducts.map((valentineProduct) => (
-          <li key={valentineProduct._id}>{valentineProduct.name}</li>
+          <li key={valentineProduct._id}>
+            <Card product={valentineProduct} />
+          </li>
         ))}
       </ul>
     </>
