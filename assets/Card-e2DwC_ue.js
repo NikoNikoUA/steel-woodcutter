@@ -1,1 +1,0 @@
-import{j as r}from"./index-BA2O46gg.js";const h=({product:t})=>{const{name:s,description:i,price:e,url:n}=t;return r.jsxs(r.Fragment,{children:[r.jsx("h2",{children:s}),r.jsx("img",{alt:s,src:`http://localhost:3000${n}`,width:"350",height:"250"}),r.jsxs("div",{children:["Ціна: ",e," UAH"]}),r.jsx("div",{children:i})]})};export{h as C};
