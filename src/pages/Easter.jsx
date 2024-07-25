@@ -4,6 +4,7 @@ import { BackLink } from "../components/BackLink/BackLink";
 import { fetchEasterProducts } from "../utils/api";
 import { Card } from "../components/Card/Card";
 import { BasicModal } from "../components/Modal/Modal";
+import { CardDetails } from "../components/CardDetails/CardDetails";
 
 export const Easter = () => {
   const [easterProducts, setEasterProduct] = useState([]);
@@ -52,8 +53,7 @@ export const Easter = () => {
       </ul>
       {selectedProduct && (
         <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
-          <div>{selectedProduct.name}</div>
-          <div>{selectedProduct.description}</div>
+          <CardDetails product={selectedProduct} />
         </BasicModal>
       )}
     </>
