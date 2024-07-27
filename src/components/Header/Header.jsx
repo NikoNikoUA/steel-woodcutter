@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { AuthUser } from "../AuthUser/AuthUser";
+import { UserInfo } from "../UserInfo/UserInfo";
 
 export const Header = () => {
   return (
@@ -17,6 +19,8 @@ export const Header = () => {
             </li>
           </ul>
         </nav>
+        <AuthUser />
+        <UserInfo />
       </header>
     </section>
   );

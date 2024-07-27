@@ -10,8 +10,9 @@ export const SharedLayout = () => {
       <main>
         <Suspense fallback={<div>Loading...</div>}>
           <Outlet />
-          <Footer />
+       
         </Suspense>
+           <Footer />
       </main>
     </>
   );
