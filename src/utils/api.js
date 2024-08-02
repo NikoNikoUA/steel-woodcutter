@@ -26,3 +26,23 @@ export const fetchBookProducts = async () => {
   const response = await axios.get("/api/book-products/");
   return response.data;
 };
+
+export const addToFavorites = async () => {
+  const response = await axios.post("api/favorites/");
+  return response.data;
+};
+
+export const getAllFavorites = async () => {
+  const response = await axios.get("api/favorites/");
+  return response.data;
+};
+
+export const removeFromFavorites = async (id) => {
+  try {
+    const response = await axios.delete(`api/favorites/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error removing favorites:", error);
+    throw error;
+  }
+};
