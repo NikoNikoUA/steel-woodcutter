@@ -46,3 +46,8 @@ export const removeFromFavorites = async (id) => {
     throw error;
   }
 };
+
+export const updateUser = async (newData) => {
+  const response = await axios.put(`api/auth/users/${newData}`);
+  return response.data;
+};
