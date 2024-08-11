@@ -51,3 +51,29 @@ export const updateUser = async (newData) => {
   const response = await axios.put(`api/auth/users/${newData}`);
   return response.data;
 };
+
+export const register = async (data) => {
+  console.log(data);
+  try {
+    const response = await axios.post("api/auth/register", data);
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Registration error:", error);
+    return error.message;
+  }
+};
+
+export const login = async (data) => {
+  try {
+    const response = await axios.post("api/auth/login", data);
+    return response.data;
+  } catch (error) {
+    return error.message;
+  }
+};
+
+export const logout = async () => {
+  const response = await axios.post("api/auth/logout");
+  return response.data;
+};
