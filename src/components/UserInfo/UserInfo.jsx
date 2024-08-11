@@ -1,3 +1,5 @@
+import { currentUser } from "../../utils/api";
+
 export const UserInfo = () => {
   return (
     <>

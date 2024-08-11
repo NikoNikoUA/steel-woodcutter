@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { AuthUser } from "../AuthUser/AuthUser";
 import { UserInfo } from "../UserInfo/UserInfo";
+import { currentUser } from "../../utils/api";
 
 export const Header = () => {
   return (

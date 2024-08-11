@@ -52,8 +52,13 @@ export const updateUser = async (newData) => {
   return response.data;
 };
 
+export const currentUser = async () => {
+  const response = await axios.get("api/auth/current");
+  console.log(response.data);
+  return response.data;
+};
+
 export const register = async (data) => {
-  console.log(data);
   try {
     const response = await axios.post("api/auth/register", data);
     console.log(response.data);
