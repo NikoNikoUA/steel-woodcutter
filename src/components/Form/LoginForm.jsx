@@ -6,6 +6,7 @@ import { useState } from "react";
 import { login } from "../../utils/api";
 import { useDispatch } from "react-redux";
 import { addToken } from "../../../redux/auth/authSlice";
+import { addName } from "../../../redux/user/userSlice";
 
 export const LoginForm = ({ closeModal }) => {
   const dispatch = useDispatch();
@@ -16,12 +17,11 @@ export const LoginForm = ({ closeModal }) => {
   };
 
   const handleSubmit = async (values, actions) => {
-    console.log(values);
     const response = await login(values);
-    const token = response.token;
+    const { token, username } = response;
+
     dispatch(addToken(token));
-    // await updateProfile(auth.currentUser, { displayName: name });
-    // dispatch(addToken(user.accessToken));
+    dispatch(addName(username));
     closeModal();
     actions.resetForm();
   };

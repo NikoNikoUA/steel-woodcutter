@@ -14,8 +14,6 @@ export const RegistrationForm = ({ closeModal }) => {
 
   const handleSubmit = async (values, actions) => {
     await register(values);
-    // await updateProfile(auth.currentUser, { displayName: name });
-    // dispatch(addToken(user.accessToken));
     closeModal();
     actions.resetForm();
   };

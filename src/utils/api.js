@@ -1,5 +1,4 @@
 import axios from "axios";
-import { addToken, removeToken } from "../../redux/auth/authSlice";
 
 axios.defaults.baseURL = "http://localhost:3000";
 
@@ -59,14 +58,12 @@ export const updateUser = async (newData) => {
 
 export const currentUser = async () => {
   const response = await axios.get("api/auth/current");
-  console.log(response.data);
   return response.data;
 };
 
 export const register = async (data) => {
   try {
     const response = await axios.post("api/auth/register", data);
-
     return response.data;
   } catch (error) {
     console.error("Registration error:", error);
@@ -78,6 +75,7 @@ export const login = async (data) => {
   try {
     const response = await axios.post("api/auth/login", data);
     const token = response.data.token;
+
     setAuthHeader(token);
     return response.data;
   } catch (error) {
@@ -88,6 +86,7 @@ export const login = async (data) => {
 export const logout = async () => {
   try {
     const response = await axios.post("api/auth/logout");
+    delete axios.defaults.headers.common.Authorization;
     return response.data;
   } catch (error) {
     console.error("Logout error:", error);
