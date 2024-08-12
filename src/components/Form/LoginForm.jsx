@@ -4,8 +4,11 @@ import icons from "../../sprite.svg";
 
 import { useState } from "react";
 import { login } from "../../utils/api";
+import { useDispatch } from "react-redux";
+import { addToken } from "../../../redux/auth/authSlice";
 
 export const LoginForm = ({ closeModal }) => {
+  const dispatch = useDispatch();
   const [showPassword, setShowPassword] = useState(false);
 
   const handlePasswordVisibility = () => {
@@ -14,7 +17,9 @@ export const LoginForm = ({ closeModal }) => {
 
   const handleSubmit = async (values, actions) => {
     console.log(values);
-    await login(values);
+    const response = await login(values);
+    const token = response.token;
+    dispatch(addToken(token));
     // await updateProfile(auth.currentUser, { displayName: name });
     // dispatch(addToken(user.accessToken));
     closeModal();

@@ -1,6 +1,11 @@
 import axios from "axios";
+import { addToken, removeToken } from "../../redux/auth/authSlice";
 
 axios.defaults.baseURL = "http://localhost:3000";
+
+const setAuthHeader = (token) => {
+  axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+};
 
 export const fetchChristmasProducts = async () => {
   const response = await axios.get("/api/christmas-products/");
@@ -61,7 +66,7 @@ export const currentUser = async () => {
 export const register = async (data) => {
   try {
     const response = await axios.post("api/auth/register", data);
-    console.log(response.data);
+
     return response.data;
   } catch (error) {
     console.error("Registration error:", error);
@@ -72,6 +77,8 @@ export const register = async (data) => {
 export const login = async (data) => {
   try {
     const response = await axios.post("api/auth/login", data);
+    const token = response.data.token;
+    setAuthHeader(token);
     return response.data;
   } catch (error) {
     return error.message;
@@ -79,6 +86,11 @@ export const login = async (data) => {
 };
 
 export const logout = async () => {
-  const response = await axios.post("api/auth/logout");
-  return response.data;
+  try {
+    const response = await axios.post("api/auth/logout");
+    return response.data;
+  } catch (error) {
+    console.error("Logout error:", error);
+    throw error;
+  }
 };

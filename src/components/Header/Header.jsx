@@ -1,9 +1,18 @@
 import { Link } from "react-router-dom";
 import { AuthUser } from "../AuthUser/AuthUser";
 import { UserInfo } from "../UserInfo/UserInfo";
-import { currentUser } from "../../utils/api";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../../redux/selectors";
+import { useEffect, useState } from "react";
 
 export const Header = () => {
+  const authUser = useSelector(selectUser);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    setUser(authUser);
+  }, [authUser]);
+
   return (
     <section>
       <header>
@@ -20,8 +29,7 @@ export const Header = () => {
             </li>
           </ul>
         </nav>
-        <AuthUser />
-        <UserInfo />
+        {user ? <UserInfo /> : <AuthUser />}
       </header>
     </section>
   );
