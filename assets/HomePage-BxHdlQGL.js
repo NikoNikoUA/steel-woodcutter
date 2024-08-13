@@ -1,1 +1,0 @@
-import{j as e,L as s}from"./index-ICITsXol.js";const i=()=>e.jsxs(e.Fragment,{children:[e.jsx("div",{children:"HomePage"}),e.jsxs("ul",{children:[e.jsx("li",{children:e.jsx(s,{to:"/categories",children:"categories"})}),e.jsx("li",{children:e.jsx(s,{to:"/favorites",children:"Favorites"})})]})]});export{i as default};
