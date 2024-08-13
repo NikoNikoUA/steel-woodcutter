@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { BasicModal } from "../Modal/Modal";
-import { RegistrationForm } from "../../components/Form/RegistrationForm.jsx";
-import { LoginForm } from "../../components/Form/LoginForm.jsx";
+import { BasicModal } from "../../Modal/Modal.jsx";
+import { RegistrationForm } from "../../../components/Form/RegistrationForm.jsx";
+import { LoginForm } from "../../../components/Form/LoginForm.jsx";
 
 export const AuthUser = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);

@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { SharedLayout } from "./components/SharedLayout/SharedLayout.jsx";
+import { PrivateRoute } from "./components/Auth/PrivateRoute/PrivateRoute.jsx";
 
 const HomePage = lazy(() => import("./pages/HomePage.jsx"));
 const Categories = lazy(() => import("./pages/Categories.jsx"));
@@ -17,7 +18,14 @@ function App() {
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="/favorites" element={<Favorites />} />
+        <Route
+          path="/favorites"
+          element={
+            <PrivateRoute>
+              <Favorites />
+            </PrivateRoute>
+          }
+        />
         <Route path="/categories" element={<Categories />}>
           <Route path="easter" element={<Easter />} />
           <Route path="christmas" element={<Christmas />} />

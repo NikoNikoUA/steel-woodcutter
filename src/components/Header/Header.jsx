@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { AuthUser } from "../AuthUser/AuthUser";
-import { UserInfo } from "../UserInfo/UserInfo";
+import { AuthUser } from "../Auth/AuthUser/AuthUser";
+import { UserInfo } from "../Auth/UserInfo/UserInfo";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../../redux/selectors";
 import { useEffect, useState } from "react";
@@ -24,9 +24,11 @@ export const Header = () => {
             <li>
               <Link to="/categories">Categories</Link>
             </li>
-            <li>
-              <Link to="/favorites">Favorites</Link>
-            </li>
+            {user && (
+              <li>
+                <Link to="/favorites">Favorites</Link>
+              </li>
+            )}
           </ul>
         </nav>
         {user ? <UserInfo /> : <AuthUser />}

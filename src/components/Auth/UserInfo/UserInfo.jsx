@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "../../utils/api";
-import { removeToken } from "../../../redux/auth/authSlice";
-import { userName } from "../../../redux/selectors";
-import { removeName } from "../../../redux/user/userSlice";
+import { logout } from "../../../utils/api";
+import { removeToken } from "../../../../redux/auth/authSlice";
+import { userName } from "../../../../redux/selectors";
+import { removeName } from "../../../../redux/user/userSlice";
 
 export const UserInfo = () => {
   const dispatch = useDispatch();
@@ -18,7 +18,9 @@ export const UserInfo = () => {
   };
   return (
     <>
-      <p>Привіт, {username}</p>
+      <p>
+        Привіт, <span>{username !== null ? username : "User"}</span>
+      </p>
       <button onClick={handleLogout} type="button">
         Вихід
       </button>
