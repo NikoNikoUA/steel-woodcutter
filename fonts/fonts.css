@@ -5,3 +5,28 @@
   font-weight: 400;
   font-style: cursive;
 }
+
+@font-face {
+  font-family: "Caveat";
+  src: local("Caveat"),
+    url(./caveat-variablefont_wght-webfont.woff) format(woff),
+    url(./caveat-variablefont_wght-webfont.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), url(./roboto-regular-webfont.woff) format(woff),
+    url(./roboto-regular-webfont.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), url(./roboto-bold-webfont.woff) format(woff),
+    url(./roboto-bold-webfont.woff2) format("woff2");
+  font-weight: 700;
+  font-style: bold;
+}

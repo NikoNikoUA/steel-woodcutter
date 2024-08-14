@@ -6,7 +6,7 @@ export const Globalstyle = createGlobalStyle`
 
 body {
   margin: 0 auto;
-  font-family: "Pacifico", cursive;
+  font-family: "roboto", normal;
   font-weight: 400;
 font-size: 16px;
 

@@ -7,9 +7,6 @@ import { persistor, store } from "../redux/store.js";
 import { PersistGate } from "redux-persist/integration/react";
 import { Globalstyle } from "../GlobalStyle.jsx";
 
-import "../fonts/pacifico-regular-webfont.woff";
-import "../fonts/pacifico-regular-webfont.woff2";
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>

@@ -1,17 +1,13 @@
-import { Link } from "react-router-dom";
+import { AboutUs } from "../components/HomePage/AboutUs/AboutUs";
+import { ContactUs } from "../components/HomePage/ContactUs/ContactUs";
+import { OurWorks } from "../components/HomePage/OurWorks/OurWorks";
 
 const HomePage = () => {
   return (
     <>
-      <div>HomePage</div>
-      <ul>
-        <li>
-          <Link to="/categories">categories</Link>
-        </li>
-        <li>
-          <Link to="/favorites">Favorites</Link>
-        </li>
-      </ul>
+      <AboutUs />
+      <OurWorks />
+      <ContactUs />
     </>
   );
 };
