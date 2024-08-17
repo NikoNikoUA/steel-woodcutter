@@ -8,6 +8,8 @@ import pic6 from "../../../../public/slider-images/img_6.jpg";
 import pic7 from "../../../../public/slider-images/img_7.jpg";
 import pic8 from "../../../../public/slider-images/img_8.jpg";
 import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
+
 import {
   SliderWrapper,
   Img,
@@ -40,9 +42,16 @@ export const Slider = () => {
     });
   };
 
+  const handlers = useSwipeable({
+    onSwipedLeft: showNextPic,
+    onSwipedRight: showPrevPic,
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
   return (
     <>
-      <SliderWrapper>
+      <SliderWrapper {...handlers}>
         <PicWrapper>
           {PICS.map((pic) => (
             <Img
