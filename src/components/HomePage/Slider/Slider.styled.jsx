@@ -55,6 +55,7 @@ export const PicWrapper = styled.div`
   height: 100%;
   overflow: hidden;
   display: flex;
+  gap: 5px;
 `;
 
 export const NavigationWrapper = styled.div`
