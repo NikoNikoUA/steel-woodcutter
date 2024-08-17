@@ -1,4 +1,4 @@
-import { TiArrowRightOutline, TiArrowLeftOutline } from "react-icons/ti";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import pic1 from "../../../../public/slider-images/img_1.jpg";
 import pic2 from "../../../../public/slider-images/img_2.jpg";
 import pic3 from "../../../../public/slider-images/img_3.jpg";
@@ -54,10 +54,10 @@ export const Slider = () => {
         </PicWrapper>
 
         <SliderButton onClick={showPrevPic} style={{ left: "0" }}>
-          <TiArrowLeftOutline />
+          <MdKeyboardArrowLeft />
         </SliderButton>
         <SliderButton onClick={showNextPic} style={{ right: "0" }}>
-          <TiArrowRightOutline />
+          <MdKeyboardArrowRight />
         </SliderButton>
         <NavigationWrapper>
           {PICS.map((_, index) => (

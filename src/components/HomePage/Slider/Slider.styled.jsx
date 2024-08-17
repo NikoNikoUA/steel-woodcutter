@@ -10,7 +10,7 @@ export const SliderWrapper = styled.div`
 `;
 
 export const Img = styled.img`
-  object-fit: scale-down;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   display: block;
@@ -30,7 +30,7 @@ export const SliderButton = styled.button`
   transition: background-color 200ms ease-in-out;
 
   &:hover {
-    background-color: rgb(0, 0, 0, 0.05);
+    background-color: rgb(0, 0, 0, 0.5);
   }
 
   svg {
