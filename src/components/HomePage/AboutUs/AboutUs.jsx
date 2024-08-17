@@ -1,5 +1,8 @@
 import { Img, Section } from "./AboutUs.styled";
 import { Container } from "../../../../CommonStyles.styled";
+import Image1 from "../../../../public/img_people/resized.jpg";
+import Image2 from "../../../../public/img_people/resized_Nadia.jpg";
+import Image3 from "../../../../public/img_people/resized_Valentyn.jpg";
 
 export const AboutUs = () => {
   return (
@@ -22,7 +25,7 @@ export const AboutUs = () => {
         >
           <Img
             alt="image of a project creator"
-            src="public\img_people\resized.jpg"
+            src={Image1}
             width="250"
             height="360"
           />
@@ -51,12 +54,7 @@ export const AboutUs = () => {
             цієї людини. Майстер на усі руки - це про нього. Без цієї людини
             проєкт сміливо можна було б назвати просто "Лісоруб".
           </p>
-          <Img
-            alt="image of Valentyn"
-            src="public\img_people\resized_Valentyn.jpg"
-            width="250"
-            height="360"
-          />
+          <Img alt="image of Valentyn" src={Image3} width="250" height="360" />
         </div>
         <div
           style={{
@@ -66,12 +64,7 @@ export const AboutUs = () => {
             marginBottom: "30px",
           }}
         >
-          <Img
-            alt="image of Nadia"
-            src="public\img_people\resized_Nadia.jpg"
-            width="250"
-            height="360"
-          />
+          <Img alt="image of Nadia" src={Image2} width="250" height="360" />
           <p>
             <span>Колір проєкту: Іванюк Надія</span>
             <br />
