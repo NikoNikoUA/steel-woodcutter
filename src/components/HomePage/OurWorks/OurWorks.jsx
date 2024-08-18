@@ -1,11 +1,13 @@
-import { Container } from "../../../../CommonStyles.styled";
+import { Container, Section } from "../../../../CommonStyles.styled";
 import { Slider } from "../Slider/Slider";
 
 export const OurWorks = () => {
   return (
-    <Container>
-      <h2>Our Works</h2>
-      <Slider />
-    </Container>
+    <Section>
+      <Container>
+        <h2>Наші Вироби</h2>
+        <Slider />
+      </Container>
+    </Section>
   );
 };

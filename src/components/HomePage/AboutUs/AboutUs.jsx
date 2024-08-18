@@ -1,5 +1,5 @@
-import { Img, Section } from "./AboutUs.styled";
-import { Container } from "../../../../CommonStyles.styled";
+import { Img } from "./AboutUs.styled";
+import { Container, Section } from "../../../../CommonStyles.styled";
 import Image1 from "../../../../public/img_people/resized.jpg";
 import Image2 from "../../../../public/img_people/resized_Nadia.jpg";
 import Image3 from "../../../../public/img_people/resized_Valentyn.jpg";
@@ -8,7 +8,7 @@ export const AboutUs = () => {
   return (
     <Section>
       <Container>
-        <h1>Who we are</h1>
+        <h2>Хто Ми</h2>
         <p>
           Сталевий лісоруб - це проєкт, що має за мету зробити Ваше життя
           яскравішим, прикрасивши його стильними і красивими виробами з дерева і
@@ -23,15 +23,16 @@ export const AboutUs = () => {
             marginBottom: "30px",
           }}
         >
-          <Img
-            alt="image of a project creator"
-            src={Image1}
-            width="250"
-            height="360"
-          />
+          <div>
+            <Img
+              alt="image of a project creator"
+              src={Image1}
+              width="300"
+              height="450"
+            />
+            <p>Засновник проєкту: Косинський Микола</p>
+          </div>
           <p>
-            <span>Засновник проєкту: Косинський Микола</span>
-            <br />
             Коли він почав працювати з деревом, на думку навіть не спадало, що з
             часом це захоплення переросте в дещо більше: в пристрасть. Бажання
             створюватися прості, але водночас стильні вироби, і ділитися ними з
@@ -48,13 +49,19 @@ export const AboutUs = () => {
           }}
         >
           <p>
-            <span>Металеве серце проєкту: Косинський Валентин</span>
-            <br />
             Усі металеві конструкції, які ви зможете знайти на сайті - робота
             цієї людини. Майстер на усі руки - це про нього. Без цієї людини
             проєкт сміливо можна було б назвати просто "Лісоруб".
           </p>
-          <Img alt="image of Valentyn" src={Image3} width="250" height="360" />
+          <div>
+            <Img
+              alt="image of Valentyn"
+              src={Image3}
+              width="300"
+              height="450"
+            />
+            <p>Металеве серце проєкту: Косинський Валентин</p>
+          </div>
         </div>
         <div
           style={{
@@ -64,10 +71,11 @@ export const AboutUs = () => {
             marginBottom: "30px",
           }}
         >
-          <Img alt="image of Nadia" src={Image2} width="250" height="360" />
+          <div>
+            <Img alt="image of Nadia" src={Image2} width="300" height="450" />
+            <p>Колір проєкту: Іванюк Надія</p>
+          </div>
           <p>
-            <span>Колір проєкту: Іванюк Надія</span>
-            <br />
             Надія додає кольорів не лише у вироби, а й в життя усієї команди.
             Окрім того, вона ще й активно допомагає в розробці моделей. Одним
             словом: незамінний член команди.

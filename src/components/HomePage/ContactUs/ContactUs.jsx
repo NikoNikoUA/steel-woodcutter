@@ -1,8 +1,12 @@
+import { Container, Section } from "../../../../CommonStyles.styled";
+
 export const ContactUs = () => {
   return (
-    <>
-      <h2>Contact Us</h2>
-      <p>Тут будуть лінки на соцмережі та контактний телефон</p>
-    </>
+    <Section style={{ backgroundColor: "rgb(244, 244, 253)" }}>
+      <Container>
+        <h2>Зворотній зв'язок</h2>
+        <p>Тут будуть лінки на соцмережі та контактний телефон</p>
+      </Container>
+    </Section>
   );
 };
