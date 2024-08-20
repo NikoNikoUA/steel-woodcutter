@@ -74,7 +74,7 @@ export const NavigationButton = styled.button`
   border: 2px solid white;
   border-radius: 50%;
   cursor: pointer;
-  transition: scale 100ms ease-in-out;
+  transition: scale 300ms ease-in-out;
 
   &:focus,
   &:hover {

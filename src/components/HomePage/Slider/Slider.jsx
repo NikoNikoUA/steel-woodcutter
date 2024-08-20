@@ -7,7 +7,7 @@ import pic5 from "../../../../public/slider-images/img_5.jpg";
 import pic6 from "../../../../public/slider-images/img_6.jpg";
 import pic7 from "../../../../public/slider-images/img_7.jpg";
 import pic8 from "../../../../public/slider-images/img_8.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 
 import {
@@ -48,6 +48,11 @@ export const Slider = () => {
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
+
+  useEffect(() => {
+    const interval = setInterval(showNextPic, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>

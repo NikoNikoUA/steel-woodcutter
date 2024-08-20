@@ -2,6 +2,15 @@ import { useState } from "react";
 import { BasicModal } from "../../Modal/Modal.jsx";
 import { RegistrationForm } from "../../../components/Form/RegistrationForm.jsx";
 import { LoginForm } from "../../../components/Form/LoginForm.jsx";
+import {
+  AuthContainer,
+  SvgLogin,
+  AuthList,
+  LoginButtton,
+  RegButton,
+} from "./AuthUser.styled.jsx";
+import icons from "../../../sprite.svg";
+import { Lia500Px } from "react-icons/lia";
 
 export const AuthUser = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -28,19 +37,23 @@ export const AuthUser = () => {
   };
 
   return (
-    <>
-      <ul>
+    <AuthContainer>
+      <SvgLogin width="20px" height="20px">
+        <use href={`${icons}#icon-login`}></use>
+      </SvgLogin>
+
+      <AuthList>
         <li>
-          <button onClick={openLoginModal} type="button">
+          <LoginButtton onClick={openLoginModal} type="button">
             Вхід
-          </button>
+          </LoginButtton>
         </li>
         <li>
-          <button onClick={openRegistrationModal} type="button">
+          <RegButton onClick={openRegistrationModal} type="button">
             Реєстрація
-          </button>
+          </RegButton>
         </li>
-      </ul>
+      </AuthList>
 
       <BasicModal isOpen={isLoginModalOpen} onRequestClose={closeLoginModal}>
         <LoginForm closeModal={closeLoginModal} />
@@ -49,6 +62,6 @@ export const AuthUser = () => {
       <BasicModal isOpen={isRegModalOpen} onRequestClose={closeRegModal}>
         <RegistrationForm closeModal={closeRegModal} />
       </BasicModal>
-    </>
+    </AuthContainer>
   );
 };

@@ -1,16 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 import "modern-normalize";
-import "./fonts/fonts.css";
+// import "./fonts/fonts.css";
 
 export const Globalstyle = createGlobalStyle`
 
 body {
   margin: 0 auto;
-  font-family: "roboto", normal;
-  font-weight: 400;
-font-size: 16px;
-
-
 
  ::-webkit-scrollbar {
     width: 8px; 

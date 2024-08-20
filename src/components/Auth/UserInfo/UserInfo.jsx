@@ -3,6 +3,7 @@ import { logout } from "../../../utils/api";
 import { removeToken } from "../../../../redux/auth/authSlice";
 import { userName } from "../../../../redux/selectors";
 import { removeName } from "../../../../redux/user/userSlice";
+import { HelloText, UserContainer, LogOutButton } from "./UserInfo.styled";
 
 export const UserInfo = () => {
   const dispatch = useDispatch();
@@ -17,13 +18,17 @@ export const UserInfo = () => {
     }
   };
   return (
-    <>
-      <p>
-        Привіт, <span>{username !== null ? username : "User"}</span>
-      </p>
-      <button onClick={handleLogout} type="button">
+    <UserContainer>
+      <HelloText>
+        Привіт,{" "}
+        <span style={{ fontWeight: "bold" }}>
+          {username !== null ? username : "User"}
+        </span>
+      </HelloText>
+
+      <LogOutButton onClick={handleLogout} type="button">
         Вихід
-      </button>
-    </>
+      </LogOutButton>
+    </UserContainer>
   );
 };

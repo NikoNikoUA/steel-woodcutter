@@ -5,10 +5,6 @@ import backgroundImageDesc from "../../../../public/hero/background-desctop.jpg"
 
 export const HeroSection = styled.section`
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-
-  /* height: 600px; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -42,7 +38,7 @@ export const HeroSection = styled.section`
 
   @media screen and (min-width: 1440px) {
     height: 600px;
-    width: 1500px;
+    width: 100%;
     background-image: linear-gradient(
         to top,
         rgba(17, 17, 17, 0.4),
@@ -65,18 +61,17 @@ export const HeroContainer = styled.div`
 
 export const TextContainer = styled.div`
   position: absolute;
-
   height: 150px;
-  width: 420px;
+  width: 350px;
   padding: 20px;
   background-color: transparent;
-  /* border: 4px solid grey; */
 
   @media screen and (max-width: 767px) {
     display: none;
   }
 
   @media screen and (min-width: 768px) {
+    display: block;
     top: 100px;
     right: 30px;
   }
@@ -89,10 +84,9 @@ export const TextContainer = styled.div`
 
 export const MainHeader = styled.h1`
   margin-bottom: 10px;
-  font-size: 25px;
+  font-size: 30px;
 `;
 
 export const HeroText = styled.p`
   font-size: 20px;
-  /* color: white; */
 `;
