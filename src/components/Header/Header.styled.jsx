@@ -5,7 +5,6 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 40px 0;
 `;
 
 export const PagesList = styled.ul`
@@ -32,6 +31,7 @@ export const ListItem = styled.li`
   font-weight: 600;
   font-size: 18px;
   line-height: 1.25;
+  padding: 40px 0;
   transition: font-weight 100ms ease-in-out;
 
   & .active {
@@ -47,7 +47,7 @@ export const ListItem = styled.li`
     height: 3px;
     background-color: ${(props) => props.theme.colors.mainColor};
     border-radius: 2px;
-    bottom: -15px;
+    bottom: 30px;
     left: 0;
   }
 `;

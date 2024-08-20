@@ -1,23 +1,26 @@
 import styled from "styled-components";
 
-export const HelloText = styled.p`
-  font-size: 18px;
-`;
-
 export const UserContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 15px;
-  /* padding: 40px 0; */
+  padding: 40px 0;
+`;
+
+export const HelloText = styled.p`
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
 `;
 
 export const LogOutButton = styled.button`
-  padding: 12px;
-  border: 1px solid black;
-  border-radius: 12px;
+  all: unset;
+  border: none;
   background-color: transparent;
-  font-weight: 600;
-  color: black;
+  font-weight: 400;
+  font-size: 18px;
+  color: red;
 
   transition: all 250ms ease;
 

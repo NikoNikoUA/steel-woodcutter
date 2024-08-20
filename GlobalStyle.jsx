@@ -1,11 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 import "modern-normalize";
-// import "./fonts/fonts.css";
 
 export const Globalstyle = createGlobalStyle`
 
 body {
   margin: 0 auto;
+  /* background-color: rgb(254,255,227); */
+    background-color: white;
 
  ::-webkit-scrollbar {
     width: 8px; 

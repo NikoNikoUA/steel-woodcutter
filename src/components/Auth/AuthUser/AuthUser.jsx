@@ -10,7 +10,6 @@ import {
   RegButton,
 } from "./AuthUser.styled.jsx";
 import icons from "../../../sprite.svg";
-import { Lia500Px } from "react-icons/lia";
 
 export const AuthUser = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);

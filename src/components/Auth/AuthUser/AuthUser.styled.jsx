@@ -19,13 +19,12 @@ export const AuthList = styled.ul`
 `;
 
 export const LoginButtton = styled.button`
-  padding: 12px;
-  border: 1px solid black;
-  border-radius: 12px;
+  padding: 40px 0;
+  border: none;
   background-color: transparent;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 18px;
   color: black;
-
   transition: all 250ms ease;
 
   &:hover {
@@ -34,13 +33,12 @@ export const LoginButtton = styled.button`
 `;
 
 export const RegButton = styled.button`
-  padding: 12px;
-  border: 1px solid black;
-  border-radius: 12px;
+  padding: 40px 0;
+  border: none;
   background-color: transparent;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 18px;
   color: black;
-
   transition: all 250ms ease;
 
   &:hover {
