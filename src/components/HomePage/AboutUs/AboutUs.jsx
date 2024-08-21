@@ -6,6 +6,8 @@ import {
   Names,
   PersonDescr,
   DescrContainer,
+  DescrContainerOne,
+  DescrContainerVal,
 } from "./AboutUs.styled";
 import Image1 from "../../../../public/img_people/resized.jpg";
 import Image2 from "../../../../public/img_people/resized_Nadia.jpg";
@@ -40,7 +42,7 @@ export const AboutUs = () => {
             </CardDescr>
 
             <CardDescr>
-              <DescrContainer>
+              <DescrContainerOne>
                 <Names> Металеве серце проєкту: Косинський Валентин</Names>
                 <PersonDescr>
                   Усі металеві конструкції, які ви зможете знайти на сайті -
@@ -48,7 +50,7 @@ export const AboutUs = () => {
                   Валентина проєкт сміливо можна було б назвати просто
                   "Лісоруб".
                 </PersonDescr>
-              </DescrContainer>
+              </DescrContainerOne>
               <div>
                 <Img
                   alt="image of Valentyn"
@@ -57,6 +59,15 @@ export const AboutUs = () => {
                   height="450"
                 />
               </div>
+              <DescrContainerVal>
+                <Names> Металеве серце проєкту: Косинський Валентин</Names>
+                <PersonDescr>
+                  Усі металеві конструкції, які ви зможете знайти на сайті -
+                  робота цієї людини. Майстер на усі руки - це про нього. Без
+                  Валентина проєкт сміливо можна було б назвати просто
+                  "Лісоруб".
+                </PersonDescr>
+              </DescrContainerVal>
             </CardDescr>
             <CardDescr>
               <div>

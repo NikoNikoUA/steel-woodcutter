@@ -21,6 +21,7 @@ export const LogOutButton = styled.button`
   font-weight: 400;
   font-size: 18px;
   color: red;
+  cursor: pointer;
 
   transition: all 250ms ease;
 

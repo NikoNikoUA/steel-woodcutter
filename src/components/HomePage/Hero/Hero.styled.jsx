@@ -48,17 +48,6 @@ export const HeroSection = styled.section`
   }
 `;
 
-export const HeroContainer = styled.div`
-  @media screen and (max-width: 767px) {
-  }
-
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1440px) {
-  }
-`;
-
 export const TextContainer = styled.div`
   position: absolute;
   height: 150px;
