@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../../../redux/selectors";
 import { useEffect, useState } from "react";
 import { Container, Section } from "../../../CommonStyles.styled";
-import { Nav, PagesList, PagesLink, ListItem } from "./Header.styled";
+import { Nav, PagesList, PagesLink, ListItem, Logo } from "./Header.styled";
 
 export const Header = () => {
   const authUser = useSelector(selectUser);
@@ -19,7 +19,7 @@ export const Header = () => {
       <header>
         <Container>
           <Nav>
-            <p style={{ marginRight: "100px" }}>LOGO</p>
+            <Logo>LOGO</Logo>
             <PagesList>
               <ListItem>
                 <PagesLink to="/">Home</PagesLink>

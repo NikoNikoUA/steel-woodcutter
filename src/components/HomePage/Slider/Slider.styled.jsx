@@ -7,6 +7,10 @@ export const SliderWrapper = styled.div`
   margin: 0 auto;
   height: 600px;
   position: relative;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 export const Img = styled.img`

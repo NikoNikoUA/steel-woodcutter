@@ -3,8 +3,24 @@ import { NavLink } from "react-router-dom";
 
 export const Nav = styled.nav`
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    max-width: 280px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+`;
+
+export const Logo = styled.p`
+  @media screen and (min-width: 1440px) {
+    margin-right: 100px;
+  }
 `;
 
 export const PagesList = styled.ul`
@@ -12,7 +28,10 @@ export const PagesList = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 28px;
-  margin-right: auto;
+
+  @media screen and (min-width: 1440px) {
+    margin-right: auto;
+  }
 `;
 
 export const PagesLink = styled(NavLink)`
