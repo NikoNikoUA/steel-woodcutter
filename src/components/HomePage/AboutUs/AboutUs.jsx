@@ -8,12 +8,54 @@ import {
   DescrContainer,
   DescrContainerOne,
   DescrContainerVal,
+  ImgVal,
 } from "./AboutUs.styled";
 import Image1 from "../../../../public/img_people/resized.jpg";
 import Image2 from "../../../../public/img_people/resized_Nadia.jpg";
 import Image3 from "../../../../public/img_people/resized_Valentyn.jpg";
+import { useEffect, useRef } from "react";
 
 export const AboutUs = () => {
+  const imgRef1 = useRef(null);
+  const imgRef2 = useRef(null);
+  const imgRef3 = useRef(null);
+
+  const descrRef1 = useRef(null);
+  const descrRef2 = useRef(null);
+  const descrRef3 = useRef(null);
+  const descrRef4 = useRef(null);
+
+  useEffect(() => {
+    const handleIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.5,
+    });
+
+    [
+      imgRef1.current,
+      imgRef2.current,
+      imgRef3.current,
+      descrRef1.current,
+      descrRef2.current,
+      descrRef3.current,
+      descrRef4.current,
+    ].forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <Section>
       <Container>
@@ -26,10 +68,9 @@ export const AboutUs = () => {
               <Img
                 alt="image of a project creator"
                 src={Image1}
-                width="300"
-                height="450"
+                ref={imgRef1}
               />
-              <DescrContainer>
+              <DescrContainer ref={descrRef1}>
                 <Names>Засновник проєкту: Косинський Микола</Names>
                 <PersonDescr>
                   Коли він почав працювати з деревом, на думку навіть не
@@ -42,7 +83,7 @@ export const AboutUs = () => {
             </CardDescr>
 
             <CardDescr>
-              <DescrContainerOne>
+              <DescrContainerOne ref={descrRef2}>
                 <Names> Металеве серце проєкту: Косинський Валентин</Names>
                 <PersonDescr>
                   Усі металеві конструкції, які ви зможете знайти на сайті -
@@ -52,14 +93,9 @@ export const AboutUs = () => {
                 </PersonDescr>
               </DescrContainerOne>
               <div>
-                <Img
-                  alt="image of Valentyn"
-                  src={Image3}
-                  width="300"
-                  height="450"
-                />
+                <ImgVal alt="image of Valentyn" src={Image3} ref={imgRef2} />
               </div>
-              <DescrContainerVal>
+              <DescrContainerVal ref={descrRef3}>
                 <Names> Металеве серце проєкту: Косинський Валентин</Names>
                 <PersonDescr>
                   Усі металеві конструкції, які ви зможете знайти на сайті -
@@ -71,14 +107,9 @@ export const AboutUs = () => {
             </CardDescr>
             <CardDescr>
               <div>
-                <Img
-                  alt="image of Nadia"
-                  src={Image2}
-                  width="300"
-                  height="450"
-                />
+                <Img alt="image of Nadia" src={Image2} ref={imgRef3} />
               </div>
-              <DescrContainer>
+              <DescrContainer ref={descrRef4}>
                 <Names>Колір проєкту: Іванюк Надія</Names>
 
                 <PersonDescr>

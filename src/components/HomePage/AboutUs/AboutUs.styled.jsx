@@ -1,8 +1,54 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const slideInFromLeft = keyframes`
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const slideInFromRight = keyframes`
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
 
 export const Img = styled.img`
   border-radius: 20px;
+  opacity: 0;
+  /* transform: translateX(-100%); */
 
+  &.animate {
+    animation: ${slideInFromLeft} 1s ease-out forwards;
+  }
+  @media screen and (max-width: 767px) {
+    width: 280px;
+    height: 430px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 300px;
+    height: 450px;
+  }
+`;
+
+export const ImgVal = styled.img`
+  border-radius: 20px;
+  opacity: 0;
+  /* transform: translateX(-100%); */
+
+  &.animate {
+    animation: ${slideInFromRight} 1s ease-out forwards;
+  }
   @media screen and (max-width: 767px) {
     width: 280px;
     height: 430px;
@@ -36,7 +82,7 @@ export const CardDescr = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
-  &:nth-child(-n + 3) {
+  &:nth-child(-n + 2) {
     margin-bottom: 40px;
   }
 
@@ -71,31 +117,45 @@ export const DescrContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transform: translateX(100%);
+
+  &.animate {
+    animation: ${slideInFromRight} 1s ease-out forwards;
+  }
 
   @media screen and (max-width: 767px) {
     width: 280px;
   }
 `;
 
-export const DescrContainerOne = styled.div`
-  display: flex;
+export const DescrContainerOne = styled(DescrContainer)`
+  &.animate {
+    animation: ${slideInFromLeft} 1s ease-out forwards;
+  }
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: ${slideInFromRight} 1s ease-out forwards; */
 
   @media screen and (max-width: 767px) {
     display: none;
   }
 
-  @media screen and (min-width: 768px) {
-  }
+  /* @media screen and (min-width: 768px) {
+  } */
 `;
 
-export const DescrContainerVal = styled.div`
-  display: flex;
+export const DescrContainerVal = styled(DescrContainer)`
+  &.animate {
+    animation: ${slideInFromLeft} 1s ease-out forwards;
+  }
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: ${slideInFromRight} 1s ease-out forwards; */
 
   @media screen and (max-width: 767px) {
     width: 280px;
