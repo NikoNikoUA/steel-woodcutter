@@ -1,6 +1,9 @@
 import confetti from "canvas-confetti";
+import { Container, Section } from "../../../CommonStyles.styled";
 
 export const Footer = () => {
+  const isSmallScreen = window.innerWidth <= 767;
+
   const onBtnClick = () => {
     function randomInRange(min, max) {
       return Math.random() * (max - min) + min;
@@ -16,23 +19,31 @@ export const Footer = () => {
 
   return (
     <footer>
-      <div>
-        <div>
-          <p>
-            &#169; Created by{" "}
-            <a
-              rel="noreferrer"
-              target="_blank"
-              href="https://github.com/NikoNikoUA"
-            >
-              Mykola Kosynskyi
-            </a>
-          </p>
-          <button type="button" onClick={onBtnClick}>
-            Fire
-          </button>
-        </div>
-      </div>
+      <Section
+        style={{
+          backgroundColor: !isSmallScreen ? "white" : "rgb(244, 244, 253)",
+        }}
+      >
+        <Container>
+          <div>
+            <div>
+              <p>
+                &#169; Created by{" "}
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://github.com/NikoNikoUA"
+                >
+                  Mykola Kosynskyi
+                </a>
+              </p>
+              <button type="button" onClick={onBtnClick}>
+                Fire
+              </button>
+            </div>
+          </div>
+        </Container>
+      </Section>
     </footer>
   );
 };

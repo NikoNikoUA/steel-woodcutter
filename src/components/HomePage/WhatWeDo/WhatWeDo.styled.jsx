@@ -50,7 +50,7 @@ export const BenefitsList = styled.ul`
     border: none;
     border-radius: 5px;
     width: 80%;
-    height: 70px;
+    height: 100px;
     background-color: white;
 
     @media screen and (min-width: 768px) {
@@ -62,11 +62,12 @@ export const BenefitsList = styled.ul`
   }
 
   p {
-    font-size: 18px;
+    font-size: 24px;
+    padding: 15px;
   }
 
   svg {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 `;

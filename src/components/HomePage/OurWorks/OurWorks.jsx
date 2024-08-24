@@ -7,7 +7,7 @@ export const OurWorks = () => {
     !isSmallScreen && (
       <Section>
         <Container>
-          <h2>Наші Вироби</h2>
+          <h2 style={{ marginBottom: "20px" }}>Наші Вироби</h2>
           <Slider />
         </Container>
       </Section>
