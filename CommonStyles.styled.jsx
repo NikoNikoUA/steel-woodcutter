@@ -5,7 +5,15 @@ export const Container = styled.div`
   margin-right: auto;
   padding: 20px 20px;
 
+  @media screen and (min-width: 320px) {
+    max-width: 320px;
+  }
+
   @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1440px) {
     padding: 0 128px;
     max-width: 1440px;
   }
