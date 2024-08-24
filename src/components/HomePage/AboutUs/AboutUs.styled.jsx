@@ -25,7 +25,6 @@ const slideInFromRight = keyframes`
 export const Img = styled.img`
   border-radius: 20px;
   opacity: 0;
-  /* transform: translateX(-100%); */
 
   &.animate {
     animation: ${slideInFromLeft} 1s ease-out forwards;
@@ -44,7 +43,6 @@ export const Img = styled.img`
 export const ImgVal = styled.img`
   border-radius: 20px;
   opacity: 0;
-  /* transform: translateX(-100%); */
 
   &.animate {
     animation: ${slideInFromRight} 1s ease-out forwards;
@@ -118,7 +116,7 @@ export const DescrContainer = styled.div`
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transform: translateX(100%);
+  /* transform: translateX(100%); */
 
   &.animate {
     animation: ${slideInFromRight} 1s ease-out forwards;
@@ -133,11 +131,6 @@ export const DescrContainerOne = styled(DescrContainer)`
   &.animate {
     animation: ${slideInFromLeft} 1s ease-out forwards;
   }
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: ${slideInFromRight} 1s ease-out forwards; */
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -151,11 +144,6 @@ export const DescrContainerVal = styled(DescrContainer)`
   &.animate {
     animation: ${slideInFromLeft} 1s ease-out forwards;
   }
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: ${slideInFromRight} 1s ease-out forwards; */
 
   @media screen and (max-width: 767px) {
     width: 280px;
