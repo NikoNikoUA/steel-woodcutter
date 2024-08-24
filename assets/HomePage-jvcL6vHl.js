@@ -1,4 +1,4 @@
-import{m as J,d as l,r as u,j as e,S as C,C as k,R as v,l as rt}from"./index-CjtJiTbt.js";const N=J`
+import{m as J,d as l,r as u,j as e,S as C,C as k,R as v,l as rt}from"./index-3Zk8BOfh.js";const N=J`
   0% {
     transform: translateX(-100%);
     opacity: 0;
@@ -84,12 +84,12 @@ import{m as J,d as l,r as u,j as e,S as C,C as k,R as v,l as rt}from"./index-Cjt
   line-height: 1.2;
   margin-bottom: 20px;
 `,P=l.p`
-  width: 280px;
+  max-width: 280px;
   text-align: left;
   font-size: 20px;
 
   @media screen and (min-width: 768px) {
-    width: 500px;
+    max-width: 500px;
     text-align: center;
   }
 `,B=l.div`
@@ -97,7 +97,7 @@ import{m as J,d as l,r as u,j as e,S as C,C as k,R as v,l as rt}from"./index-Cjt
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  /* opacity: 0; */
   /* transform: translateX(100%); */
 
   &.animate {
@@ -105,7 +105,7 @@ import{m as J,d as l,r as u,j as e,S as C,C as k,R as v,l as rt}from"./index-Cjt
   }
 
   @media screen and (max-width: 767px) {
-    width: 280px;
+    max-width: 280px;
   }
 `,st=l(B)`
   &.animate {
@@ -171,6 +171,8 @@ import{m as J,d as l,r as u,j as e,S as C,C as k,R as v,l as rt}from"./index-Cjt
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  margin-left: auto;
+  margin-right: auto;
   background-image: linear-gradient(
     to top,
     rgba(17, 17, 17, 0.4),
