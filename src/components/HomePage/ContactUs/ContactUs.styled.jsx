@@ -26,7 +26,7 @@ export const ContactList = styled.ul`
 export const AdditionalHeading = styled.p`
   margin-bottom: 15px;
   font-size: 18px;
-  text-decoration: underline;
+  text-decoration: uppercase;
 `;
 
 export const TelButton = styled.button`

@@ -115,8 +115,8 @@ export const DescrContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* opacity: 0; */
-  /* transform: translateX(100%); */
+  opacity: 0;
+  transform: translateX(100%);
 
   &.animate {
     animation: ${slideInFromRight} 1s ease-out forwards;
