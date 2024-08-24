@@ -8,6 +8,8 @@ export const HeroSection = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  margin-left: auto;
+  margin-right: auto;
   background-image: linear-gradient(
     to top,
     rgba(17, 17, 17, 0.4),

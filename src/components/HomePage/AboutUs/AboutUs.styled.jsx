@@ -100,12 +100,12 @@ export const Names = styled.p`
 `;
 
 export const PersonDescr = styled.p`
-  width: 280px;
+  max-width: 280px;
   text-align: left;
   font-size: 20px;
 
   @media screen and (min-width: 768px) {
-    width: 500px;
+    max-width: 500px;
     text-align: center;
   }
 `;
@@ -115,7 +115,7 @@ export const DescrContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  /* opacity: 0; */
   /* transform: translateX(100%); */
 
   &.animate {
@@ -123,7 +123,7 @@ export const DescrContainer = styled.div`
   }
 
   @media screen and (max-width: 767px) {
-    width: 280px;
+    max-width: 280px;
   }
 `;
 
