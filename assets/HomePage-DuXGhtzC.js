@@ -1,4 +1,4 @@
-import{m as J,d as l,r as u,j as e,S as C,C as k,R as v,l as rt}from"./index-3Zk8BOfh.js";const N=J`
+import{m as J,d as l,r as u,j as e,S as C,C as k,R as v,l as rt}from"./index-CaQi86_f.js";const N=J`
   0% {
     transform: translateX(-100%);
     opacity: 0;
@@ -97,8 +97,8 @@ import{m as J,d as l,r as u,j as e,S as C,C as k,R as v,l as rt}from"./index-3Zk
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* opacity: 0; */
-  /* transform: translateX(100%); */
+  opacity: 0;
+  transform: translateX(100%);
 
   &.animate {
     animation: ${Q} 1s ease-out forwards;
@@ -151,7 +151,7 @@ import{m as J,d as l,r as u,j as e,S as C,C as k,R as v,l as rt}from"./index-3Zk
 `,V=l.p`
   margin-bottom: 15px;
   font-size: 18px;
-  text-decoration: underline;
+  text-decoration: uppercase;
 `,pt=l.button`
   all: unset;
 `,ft=()=>{const t=window.innerWidth<=767;return e.jsx(C,{style:{backgroundColor:t?"white":"rgb(244, 244, 253)"},children:e.jsx(k,{children:e.jsxs(gt,{children:[e.jsx("h2",{children:"Зворотній зв'язок"}),e.jsxs(xt,{children:[e.jsxs("li",{children:[e.jsx(V,{children:"Дзвоніть нам:"}),e.jsx(pt,{type:"button",onClick:()=>window.location.href="tel:+380687586133",children:"Tel: +(380)687-58-61-33"})]}),e.jsxs("li",{children:[e.jsx(V,{children:"Стежте за нами в соцмережах:"}),e.jsx("a",{rel:"noreferrer",target:"_blank",href:"https://www.facebook.com/kolya.kosinski",children:"Facebook"})]}),e.jsx("li",{children:e.jsx("a",{rel:"noreferrer",target:"_blank",href:"https://www.instagram.com/stalevy_lisorub",children:"Instagram"})})]})]})})})},mt=l.p`
