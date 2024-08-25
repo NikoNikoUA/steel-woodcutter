@@ -16,7 +16,7 @@ export const HeroSection = styled.section`
     rgba(17, 17, 17, 0)
   );
 
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 320px) {
     height: 600px;
     width: 320px;
     background-image: linear-gradient(
@@ -57,7 +57,7 @@ export const TextContainer = styled.div`
   padding: 20px;
   background-color: transparent;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 320px) {
     display: none;
   }
 
@@ -68,7 +68,6 @@ export const TextContainer = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-    top: 100px;
     right: 150px;
   }
 `;

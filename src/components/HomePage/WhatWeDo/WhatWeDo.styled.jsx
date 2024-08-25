@@ -20,10 +20,10 @@ export const BenefitsList = styled.ul`
   gap: 30px;
 
   @media screen and (min-width: 768px) {
+    flex-direction: row;
   }
 
   @media screen and (min-width: 1440px) {
-    flex-direction: row;
     align-items: flex-start;
   }
 

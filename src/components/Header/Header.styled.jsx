@@ -10,7 +10,12 @@ export const Nav = styled.nav`
     max-width: 280px;
   }
 
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
   @media screen and (min-width: 1440px) {
+    max-width: 1440px;
     align-items: center;
     flex-direction: row;
     justify-content: flex-start;

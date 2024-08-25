@@ -9,6 +9,7 @@ import {
   DescrContainerOne,
   DescrContainerVal,
   ImgVal,
+  ContWidth,
 } from "./AboutUs.styled";
 import Image1 from "../../../../public/img_people/resized.jpg";
 import Image2 from "../../../../public/img_people/resized_Nadia.jpg";
@@ -63,7 +64,7 @@ export const AboutUs = () => {
           <div>
             <h2>Про Нас</h2>
           </div>
-          <div style={{ width: "1000px" }}>
+          <ContWidth>
             <CardDescr>
               <Img
                 alt="image of a project creator"
@@ -119,7 +120,7 @@ export const AboutUs = () => {
                 </PersonDescr>
               </DescrContainer>
             </CardDescr>
-          </div>
+          </ContWidth>
         </InfoContainer>
       </Container>
     </Section>

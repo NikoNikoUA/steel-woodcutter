@@ -22,6 +22,16 @@ const slideInFromRight = keyframes`
   }
 `;
 
+export const ContWidth = styled.div`
+  /* @media screen and (min-width: 320px) {
+    max-width: 320px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 1000px;
+  } */
+`;
+
 export const Img = styled.img`
   border-radius: 20px;
   opacity: 0;
@@ -29,7 +39,7 @@ export const Img = styled.img`
   &.animate {
     animation: ${slideInFromLeft} 1s ease-out forwards;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 320px) {
     width: 280px;
     height: 430px;
   }
@@ -47,7 +57,7 @@ export const ImgVal = styled.img`
   &.animate {
     animation: ${slideInFromRight} 1s ease-out forwards;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 320px) {
     width: 280px;
     height: 430px;
   }
@@ -88,6 +98,7 @@ export const CardDescr = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 50px;
   }
 `;
@@ -101,7 +112,7 @@ export const Names = styled.p`
 
 export const PersonDescr = styled.p`
   max-width: 280px;
-  text-align: left;
+  text-align: start;
   font-size: 20px;
 
   @media screen and (min-width: 768px) {
@@ -116,32 +127,44 @@ export const DescrContainer = styled.div`
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transform: translateX(100%);
 
   &.animate {
+    transform: translateX(0);
     animation: ${slideInFromRight} 1s ease-out forwards;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 320px) {
     max-width: 280px;
+    text-align: start;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 1000px;
+    text-align: center;
   }
 `;
 
 export const DescrContainerOne = styled(DescrContainer)`
+  transform: none;
   &.animate {
+    transform: translateX(0);
     animation: ${slideInFromLeft} 1s ease-out forwards;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 320px) {
     display: none;
   }
 
-  /* @media screen and (min-width: 768px) {
-  } */
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 `;
 
 export const DescrContainerVal = styled(DescrContainer)`
+  transform: none;
+
   &.animate {
+    transform: translateX(0);
     animation: ${slideInFromLeft} 1s ease-out forwards;
   }
 

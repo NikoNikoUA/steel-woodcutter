@@ -19,7 +19,7 @@ export const ContactUs = () => {
           <h2>Зворотній зв'язок</h2>
           <ContactList>
             <li>
-              <AdditionalHeading>Дзвоніть нам:</AdditionalHeading>
+              <AdditionalHeading>Наш телефон:</AdditionalHeading>
               <TelButton
                 type="button"
                 onClick={() => (window.location.href = "tel:+380687586133")}
@@ -28,9 +28,7 @@ export const ContactUs = () => {
               </TelButton>
             </li>
             <li>
-              <AdditionalHeading>
-                Стежте за нами в соцмережах:
-              </AdditionalHeading>
+              <AdditionalHeading>Ми в соцмережах:</AdditionalHeading>
               <a
                 rel="noreferrer"
                 target="_blank"
