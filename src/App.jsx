@@ -26,13 +26,13 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route path="/categories" element={<Categories />}>
-          <Route path="easter" element={<Easter />} />
-          <Route path="christmas" element={<Christmas />} />
-          <Route path="valentine" element={<Valentine />} />
-          <Route path="miscellaneous" element={<Miscellaneous />} />
-          <Route path="book" element={<Book />} />
-        </Route>
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/categories/easter" element={<Easter />} />
+        <Route path="/categories/christmas" element={<Christmas />} />
+        <Route path="/categories/valentine" element={<Valentine />} />
+        <Route path="/categories/miscellaneous" element={<Miscellaneous />} />
+        <Route path="/categories/book" element={<Book />} />
+
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
