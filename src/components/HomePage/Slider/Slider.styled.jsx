@@ -33,8 +33,10 @@ export const SliderButton = styled.button`
   cursor: pointer;
   transition: background-color 200ms ease-in-out;
 
-  &:hover {
-    background-color: rgb(0, 0, 0, 0.5);
+  @media screen and (min-width: 1440px) {
+    &:hover {
+      background-color: rgb(0, 0, 0, 0.5);
+    }
   }
 
   svg {

@@ -4,6 +4,7 @@ import {
   ContactList,
   AdditionalHeading,
   TelButton,
+  SocialLink,
 } from "./ContactUs.styled";
 
 export const ContactUs = () => {
@@ -29,22 +30,26 @@ export const ContactUs = () => {
             </li>
             <li>
               <AdditionalHeading>Ми в соцмережах:</AdditionalHeading>
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://www.facebook.com/kolya.kosinski"
-              >
-                Facebook
-              </a>
+              <SocialLink>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://www.facebook.com/kolya.kosinski"
+                >
+                  Facebook
+                </a>
+              </SocialLink>
             </li>
             <li>
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://www.instagram.com/stalevy_lisorub"
-              >
-                Instagram
-              </a>
+              <SocialLink>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://www.instagram.com/stalevy_lisorub"
+                >
+                  Instagram
+                </a>
+              </SocialLink>
             </li>
           </ContactList>
         </ContactsContainer>

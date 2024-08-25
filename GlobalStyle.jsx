@@ -7,6 +7,7 @@ body {
   margin: 0 auto;
   /* background-color: rgb(254,255,227); */
     background-color: white;
+    height: 100%;
 
  ::-webkit-scrollbar {
     width: 8px; 
@@ -31,6 +32,10 @@ body {
   }
 
 
+}
+
+main {
+  flex: 1;
 }
 
 h1,
