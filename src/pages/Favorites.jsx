@@ -1,5 +1,11 @@
+import { Container, Section } from "../../CommonStyles.styled";
+
 const Favorites = () => {
-  return <div>Favorites</div>;
+  return (
+    <Section>
+      <Container>Favorites</Container>
+    </Section>
+  );
 };
 
 export default Favorites;

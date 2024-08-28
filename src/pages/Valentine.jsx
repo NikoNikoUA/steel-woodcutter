@@ -5,6 +5,7 @@ import { fetchValentineProducts } from "../utils/api";
 import { Card } from "../components/Card/Card";
 import { BasicModal } from "../components/Modal/Modal";
 import { CardDetails } from "../components/CardDetails/CardDetails";
+import { Container, Section } from "../../CommonStyles.styled";
 
 export const Valentine = () => {
   const [valentineProducts, setValentineProducts] = useState([]);
@@ -38,25 +39,27 @@ export const Valentine = () => {
   });
 
   return (
-    <>
-      <BackLink to={backLinkHref.current} />
-      <div>Valentine</div>
-      <ul>
-        {valentineProducts.map((valentineProduct) => (
-          <li key={valentineProduct._id}>
-            <Card
-              product={valentineProduct}
-              openModal={() => openModal(valentineProduct)}
-            />
-          </li>
-        ))}
-      </ul>
-      {selectedProduct && (
-        <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
-          <CardDetails product={selectedProduct} />
-        </BasicModal>
-      )}
-    </>
+    <Section>
+      <Container>
+        <BackLink to={backLinkHref.current} />
+        <div>Valentine</div>
+        <ul>
+          {valentineProducts.map((valentineProduct) => (
+            <li key={valentineProduct._id}>
+              <Card
+                product={valentineProduct}
+                openModal={() => openModal(valentineProduct)}
+              />
+            </li>
+          ))}
+        </ul>
+        {selectedProduct && (
+          <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
+            <CardDetails product={selectedProduct} />
+          </BasicModal>
+        )}
+      </Container>
+    </Section>
   );
 };
 

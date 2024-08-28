@@ -1,77 +1,72 @@
 import { Link, Outlet } from "react-router-dom";
 import { Container, Section } from "../../../CommonStyles.styled";
-import { CategoriesContainer } from "./Categories.styled";
-import easter from "../../../public/categories-images/Пасха.jpg";
-import christmas from "../../../public/categories-images/Різдво.jpg";
-import valentine from "../../../public/categories-images/Валентина.jpg";
-import miscellaneous from "../../../public/categories-images/Різне.jpg";
-import book from "../../../public/categories-images/Книга.jpg";
+import {
+  CategoriesContainer,
+  CategoryImg,
+  CategoryHeading,
+  CategoryItem,
+} from "./Categories.styled";
+import easter from "../../../public/categories-images/easter.jpg";
+import christmas from "../../../public/categories-images/christmas.jpg";
+import valentine from "../../../public/categories-images/valentine.jpg";
+import miscellaneous from "../../../public/categories-images/miscellaneous.jpg";
+import book from "../../../public/categories-images/book.jpg";
 
 export const Category = () => {
   return (
     <Section>
       <Container>
         <CategoriesContainer>
-          <li>
+          <CategoryItem>
             <Link to="/categories/easter">
-              <img
+              <CategoryImg
                 alt="image of wooden rabbits"
                 src={easter}
-                width="280"
-                height="320"
-                style={{ opacity: "0.5" }}
+                loading="lazy"
               />
-              <p>Пасха</p>
+              <CategoryHeading>Пасха</CategoryHeading>
             </Link>
-          </li>
-          <li>
+          </CategoryItem>
+          <CategoryItem>
             <Link to="/categories/christmas">
-              <img
+              <CategoryImg
                 alt="image of a metal angel"
                 src={christmas}
-                width="280"
-                height="320"
-                style={{ opacity: "0.5" }}
+                loading="lazy"
               />
-              <p>Різдво</p>
+              <CategoryHeading>Різдво</CategoryHeading>
             </Link>
-          </li>
-          <li>
+          </CategoryItem>
+          <CategoryItem>
             <Link to="/categories/valentine">
-              <img
+              <CategoryImg
                 alt="image of a wooden model of hyppos"
                 src={valentine}
-                width="280"
-                height="320"
-                style={{ opacity: "0.5" }}
+                loading="lazy"
               />
-              <p>День Валентина</p>
+              <CategoryHeading>День Валентина</CategoryHeading>
             </Link>
-          </li>
-          <li>
+          </CategoryItem>
+          <CategoryItem>
             <Link to="/categories/miscellaneous">
-              <img
+              <CategoryImg
                 alt="image of a wooden model of hyppos"
                 src={miscellaneous}
-                width="280"
-                height="320"
-                style={{ opacity: "0.5" }}
+                loading="lazy"
               />
-              <p>Різне</p>
+              <CategoryHeading>Різне</CategoryHeading>
             </Link>
-          </li>
-          <li>
+          </CategoryItem>
+          <CategoryItem>
             <Link to="/categories/book">
-              <img
+              <CategoryImg
                 alt="image of a wooden model of hyppos"
                 src={book}
-                width="280"
-                height="320"
-                style={{ opacity: "0.5" }}
+                loading="lazy"
               />
-              <p>Книга</p>
+              <CategoryHeading>Книга</CategoryHeading>
             </Link>
-          </li>
+          </CategoryItem>
         </CategoriesContainer>
         <Outlet />
       </Container>

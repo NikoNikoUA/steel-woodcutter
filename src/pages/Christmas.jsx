@@ -5,6 +5,7 @@ import { fetchChristmasProducts } from "../utils/api";
 import { Card } from "../components/Card/Card";
 import { BasicModal } from "../components/Modal/Modal";
 import { CardDetails } from "../components/CardDetails/CardDetails";
+import { Container, Section } from "../../CommonStyles.styled";
 
 export const Christmas = () => {
   const [christmasProducts, setChristmasProducts] = useState([]);
@@ -39,25 +40,27 @@ export const Christmas = () => {
   }, []);
 
   return (
-    <>
-      <BackLink to={backLinkHref.current} />
-      <div>Christmas</div>
-      <ul>
-        {christmasProducts.map((christmasProduct) => (
-          <li key={christmasProduct._id}>
-            <Card
-              product={christmasProducts}
-              openModal={() => openModal(christmasProduct)}
-            />
-          </li>
-        ))}
-      </ul>
-      {selectedProduct && (
-        <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
-          <CardDetails product={selectedProduct} />
-        </BasicModal>
-      )}
-    </>
+    <Section>
+      <Container>
+        <BackLink to={backLinkHref.current} />
+        <div>Christmas</div>
+        <ul>
+          {christmasProducts.map((christmasProduct) => (
+            <li key={christmasProduct._id}>
+              <Card
+                product={christmasProducts}
+                openModal={() => openModal(christmasProduct)}
+              />
+            </li>
+          ))}
+        </ul>
+        {selectedProduct && (
+          <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
+            <CardDetails product={selectedProduct} />
+          </BasicModal>
+        )}
+      </Container>
+    </Section>
   );
 };
 

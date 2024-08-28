@@ -5,6 +5,7 @@ import { fetchMiscellaneousProducts } from "../utils/api";
 import { Card } from "../components/Card/Card";
 import { BasicModal } from "../components/Modal/Modal";
 import { CardDetails } from "../components/CardDetails/CardDetails";
+import { Container, Section } from "../../CommonStyles.styled";
 
 export const Miscellaneous = () => {
   const [miscellaneousProducts, setMiscellaneousProducts] = useState([]);
@@ -37,25 +38,27 @@ export const Miscellaneous = () => {
     fetchData();
   }, []);
   return (
-    <>
-      <BackLink to={backLinkHref.current} />
-      <div>Miscellaneous</div>
-      <ul>
-        {miscellaneousProducts.map((miscellaneousProduct) => (
-          <li key={miscellaneousProduct._id}>
-            <Card
-              product={miscellaneousProduct}
-              openModal={() => openModal(miscellaneousProduct)}
-            />
-          </li>
-        ))}
-      </ul>
-      {selectedProduct && (
-        <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
-          <CardDetails product={selectedProduct} />
-        </BasicModal>
-      )}
-    </>
+    <Section>
+      <Container>
+        <BackLink to={backLinkHref.current} />
+        <div>Miscellaneous</div>
+        <ul>
+          {miscellaneousProducts.map((miscellaneousProduct) => (
+            <li key={miscellaneousProduct._id}>
+              <Card
+                product={miscellaneousProduct}
+                openModal={() => openModal(miscellaneousProduct)}
+              />
+            </li>
+          ))}
+        </ul>
+        {selectedProduct && (
+          <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
+            <CardDetails product={selectedProduct} />
+          </BasicModal>
+        )}
+      </Container>
+    </Section>
   );
 };
 

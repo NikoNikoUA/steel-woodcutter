@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { BackLink } from "../components/BackLink/BackLink";
 import { fetchBookProducts } from "../utils/api";
 import { BasicModal } from "../components/Modal/Modal";
+import { Container, Section } from "../../CommonStyles.styled";
 
 export const Book = () => {
   const [bookProducts, setBookProducts] = useState([]);
@@ -36,27 +37,29 @@ export const Book = () => {
   }, []);
 
   return (
-    <>
-      <BackLink to={backLinkHref.current} />
-      <div>Book</div>
-      <ul>
-        {bookProducts.map((bookProduct) => (
-          <li key={bookProduct._id}>
-            <div>{bookProduct.name}</div>
-            <div>Ціна: {bookProduct.price} UAH</div>
-            <button type="button" onClick={() => openModal(bookProduct)}>
-              Learn more
-            </button>
-          </li>
-        ))}
-      </ul>
-      {selectedProduct && (
-        <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
-          <div>{selectedProduct.name}</div>
-          <div>{selectedProduct.description}</div>
-        </BasicModal>
-      )}
-    </>
+    <Section>
+      <Container>
+        <BackLink to={backLinkHref.current} />
+        <div>Book</div>
+        <ul>
+          {bookProducts.map((bookProduct) => (
+            <li key={bookProduct._id}>
+              <div>{bookProduct.name}</div>
+              <div>Ціна: {bookProduct.price} UAH</div>
+              <button type="button" onClick={() => openModal(bookProduct)}>
+                Learn more
+              </button>
+            </li>
+          ))}
+        </ul>
+        {selectedProduct && (
+          <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
+            <div>{selectedProduct.name}</div>
+            <div>{selectedProduct.description}</div>
+          </BasicModal>
+        )}
+      </Container>
+    </Section>
   );
 };
 

@@ -1,5 +1,11 @@
+import { Container, Section } from "../../CommonStyles.styled";
+
 const NotFound = () => {
-  return <div>NotFound</div>;
+  return (
+    <Section>
+      <Container>NotFound</Container>
+    </Section>
+  );
 };
 
 export default NotFound;
