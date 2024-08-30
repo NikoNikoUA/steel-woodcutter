@@ -31,13 +31,18 @@ export const fetchBookProducts = async () => {
   return response.data;
 };
 
-export const addToFavorites = async () => {
-  const response = await axios.post("api/favorites/");
-  return response.data;
+export const addToFavorites = async (product) => {
+  try {
+    const response = await axios.post(`api/favorites/`, product);
+    return response.data;
+  } catch (error) {
+    console.error("Error adding to favorites:", error);
+    throw error;
+  }
 };
 
-export const getAllFavorites = async () => {
-  const response = await axios.get("api/favorites/");
+export const fetchAllFavorites = async () => {
+  const response = await axios.get(`api/favorites/`);
   return response.data;
 };
 

@@ -1,21 +1,30 @@
 import React from "react";
-import { Container, Section } from "../../../CommonStyles.styled";
 
-export const Card = ({ product, openModal }) => {
+import { CardContainer, Img, TextInfo, HeartContainer } from "./Card.styled";
+import { HeartIcon } from "../HeartIcon/HeartIcon";
+
+export const Card = ({ product, openModal, onFavRemove }) => {
   const BASE_URL = "http://localhost:3000";
 
-  const { name, price, url } = product;
+  const { name, price, url, id } = product;
 
   return (
     <>
-      <Container>
-        <h2>{name}</h2>
-        <img alt={name} src={`${BASE_URL}${url}`} width="350" height="250" />
-        <h3>Ціна: {price} UAH</h3>
-      </Container>
-      <button type="button" onClick={openModal}>
-        Learn more
-      </button>
+      <CardContainer aria-hidden="false">
+        <Img alt={name} src={`${BASE_URL}${url}`} />
+        <HeartContainer>
+          <HeartIcon product={product} id={id} onFavRemove={onFavRemove} />
+        </HeartContainer>
+        <TextInfo>
+          <h2>{name}</h2>
+          <h3>Ціна: {price} ГРН</h3>
+
+          <button type="button" onClick={openModal}>
+            Читати більше
+          </button>
+          <button>Замовити</button>
+        </TextInfo>
+      </CardContainer>
     </>
   );
 };

@@ -32,7 +32,6 @@ export const CategoryHeading = styled.p`
   background-color: rgba(0, 0, 0, 0.2);
   white-space: nowrap;
   overflow: hidden;
-  /* text-overflow: ellipsis; */
   transition: all 250ms ease;
 `;
 
@@ -44,12 +43,14 @@ export const CategoryItem = styled.li`
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   transition: all 250ms ease;
 
-  &:hover {
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
-    transform: scale(1.03);
+  @media screen and (min-width: 1440px) {
+    &:hover {
+      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+      transform: scale(1.03);
 
-    & ${CategoryHeading} {
-      bottom: -25%;
+      & ${CategoryHeading} {
+        bottom: -25%;
+      }
     }
   }
 `;
@@ -60,7 +61,9 @@ export const CategoryImg = styled.img`
   opacity: 0.5;
   transition: opacity 0.5s ease-out;
 
-  &:hover {
-    opacity: 1;
+  @media screen and (min-width: 1440px) {
+    &:hover {
+      opacity: 1;
+    }
   }
 `;
