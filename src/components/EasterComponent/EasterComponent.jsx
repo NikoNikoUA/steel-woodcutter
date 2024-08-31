@@ -3,7 +3,7 @@ import { Card } from "../Card/Card";
 import { CardDetails } from "../CardDetails/CardDetails";
 import { BasicModal } from "../Modal/Modal";
 import { fetchEasterProducts } from "../../utils/api";
-import { EasterList } from "./EasterComponent.styled";
+import { ListStyling } from "../../../CommonStyles.styled";
 
 export const EasterComponent = () => {
   const [easterProducts, setEasterProduct] = useState([]);
@@ -35,7 +35,7 @@ export const EasterComponent = () => {
   }, []);
   return (
     <>
-      <EasterList>
+      <ListStyling>
         {easterProducts.map((easterProduct) => (
           <li key={easterProduct._id}>
             <Card
@@ -44,7 +44,7 @@ export const EasterComponent = () => {
             />
           </li>
         ))}
-      </EasterList>
+      </ListStyling>
       {selectedProduct && (
         <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
           <CardDetails product={selectedProduct} />

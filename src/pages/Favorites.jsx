@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Section } from "../../CommonStyles.styled";
+import { Container, ListStyling, Section } from "../../CommonStyles.styled";
 import { fetchAllFavorites } from "../utils/api";
 import { Card } from "../components/Card/Card";
 import { BasicModal } from "../components/Modal/Modal";
@@ -44,7 +44,7 @@ const Favorites = () => {
   return (
     <Section>
       <Container>
-        <ul>
+        <ListStyling>
           {favorites.map((favorite) => (
             <li key={favorite._id}>
               <Card
@@ -54,7 +54,7 @@ const Favorites = () => {
               />
             </li>
           ))}
-        </ul>
+        </ListStyling>
         {selectedProduct && (
           <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
             <CardDetails product={selectedProduct} />

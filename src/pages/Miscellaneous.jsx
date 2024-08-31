@@ -5,7 +5,7 @@ import { fetchMiscellaneousProducts } from "../utils/api";
 import { Card } from "../components/Card/Card";
 import { BasicModal } from "../components/Modal/Modal";
 import { CardDetails } from "../components/CardDetails/CardDetails";
-import { Container, Section } from "../../CommonStyles.styled";
+import { Container, ListStyling, Section } from "../../CommonStyles.styled";
 
 export const Miscellaneous = () => {
   const [miscellaneousProducts, setMiscellaneousProducts] = useState([]);
@@ -42,7 +42,7 @@ export const Miscellaneous = () => {
       <Container>
         <BackLink to={backLinkHref.current} />
         <div>Miscellaneous</div>
-        <ul>
+        <ListStyling>
           {miscellaneousProducts.map((miscellaneousProduct) => (
             <li key={miscellaneousProduct._id}>
               <Card
@@ -51,7 +51,7 @@ export const Miscellaneous = () => {
               />
             </li>
           ))}
-        </ul>
+        </ListStyling>
         {selectedProduct && (
           <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
             <CardDetails product={selectedProduct} />
