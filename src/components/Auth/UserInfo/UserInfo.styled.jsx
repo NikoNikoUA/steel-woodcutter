@@ -3,9 +3,14 @@ import styled from "styled-components";
 export const UserContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  width: 100%;
   gap: 15px;
-  padding: 40px 0;
+  padding: 20px 0;
+
+  @media screen and (min-width: 1440px) {
+    padding: 40px 0;
+  }
 `;
 
 export const HelloText = styled.p`

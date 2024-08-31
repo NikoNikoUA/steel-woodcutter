@@ -12,6 +12,7 @@ const theme = {
   colors: {
     mainColor: "#3030df",
     sectionColor: "#f4f4fd",
+    darkColor: "#000000",
   },
 };
 

@@ -4,7 +4,14 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../../../redux/selectors";
 import { useEffect, useState } from "react";
 import { Container, Section } from "../../../CommonStyles.styled";
-import { Nav, PagesList, PagesLink, ListItem, Logo } from "./Header.styled";
+import {
+  Nav,
+  PagesList,
+  PagesLink,
+  ListItem,
+  Logo,
+  MobileAuthInfo,
+} from "./Header.styled";
 
 export const Header = () => {
   const authUser = useSelector(selectUser);
@@ -20,20 +27,22 @@ export const Header = () => {
         <Container>
           <Nav>
             <Logo>LOGO</Logo>
-            <PagesList>
-              <ListItem>
-                <PagesLink to="/">Home</PagesLink>
-              </ListItem>
-              <ListItem>
-                <PagesLink to="/categories">Categories</PagesLink>
-              </ListItem>
-              {user && (
+            <MobileAuthInfo>
+              <PagesList>
                 <ListItem>
-                  <PagesLink to="/favorites">Favorites</PagesLink>
+                  <PagesLink to="/">Home</PagesLink>
                 </ListItem>
-              )}
-            </PagesList>
-            {user ? <UserInfo /> : <AuthUser />}
+                <ListItem>
+                  <PagesLink to="/categories">Categories</PagesLink>
+                </ListItem>
+                {user && (
+                  <ListItem>
+                    <PagesLink to="/favorites">Favorites</PagesLink>
+                  </ListItem>
+                )}
+              </PagesList>
+              {user ? <UserInfo /> : <AuthUser />}
+            </MobileAuthInfo>
           </Nav>
         </Container>
       </header>

@@ -26,7 +26,7 @@ export const PushModal = styled(Modal)`
   bottom: auto;
   transform: translate(-50%, -50%);
   padding: 64px;
-  border: 1px solid ${(props) => props.theme.colors.themeOrange};
+  border: 1px solid black;
 `;
 
 export const PushContainer = styled.div`
@@ -58,14 +58,14 @@ export const CloseBtn = styled.button`
   top: 20px;
 
   & > svg {
-    stroke: ${(props) => props.theme.colors.mainColor};
+    stroke: ${(props) => props.theme.colors.darkColor};
     transition: all 250ms ease;
   }
 
   transition: all 250ms ease;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.mainColor};
+    background-color: rgba(0, 0, 0, 0.3);
 
     & > svg {
       stroke: white;

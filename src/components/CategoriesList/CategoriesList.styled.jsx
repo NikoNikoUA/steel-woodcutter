@@ -1,9 +1,14 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(NavLink)`
   color: ${(props) => props.theme.colors.mainColor};
   transition: color 250ms ease-in-out;
+
+  &.active {
+    color: white;
+    font-weight: 500;
+  }
 `;
 
 export const CategoryItem = styled.li`

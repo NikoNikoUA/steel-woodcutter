@@ -4,12 +4,14 @@ import { RegistrationForm } from "../../../components/Form/RegistrationForm.jsx"
 import { LoginForm } from "../../../components/Form/LoginForm.jsx";
 import {
   AuthContainer,
-  SvgLogin,
   AuthList,
   LoginButtton,
   RegButton,
+  AuthLogo,
+  MobileAuthContainer,
+  RegLogSvgContainer,
 } from "./AuthUser.styled.jsx";
-import icons from "../../../sprite.svg";
+import { GiAxeInLog } from "react-icons/gi";
 
 export const AuthUser = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -37,27 +39,31 @@ export const AuthUser = () => {
 
   return (
     <AuthContainer>
-      <SvgLogin width="20px" height="20px">
-        <use href={`${icons}#icon-login`}></use>
-      </SvgLogin>
+      <MobileAuthContainer>
+        <div>
+          <AuthLogo>LOGO</AuthLogo>
+        </div>
 
-      <AuthList>
-        <li>
-          <LoginButtton onClick={openLoginModal} type="button">
-            Вхід
-          </LoginButtton>
-        </li>
-        <li>
-          <RegButton onClick={openRegistrationModal} type="button">
-            Реєстрація
-          </RegButton>
-        </li>
-      </AuthList>
+        <RegLogSvgContainer>
+          <GiAxeInLog style={{ width: "25px", height: "25px" }} />
 
+          <AuthList>
+            <li>
+              <LoginButtton onClick={openLoginModal} type="button">
+                Вхід
+              </LoginButtton>
+            </li>
+            <li>
+              <RegButton onClick={openRegistrationModal} type="button">
+                Реєстрація
+              </RegButton>
+            </li>
+          </AuthList>
+        </RegLogSvgContainer>
+      </MobileAuthContainer>
       <BasicModal isOpen={isLoginModalOpen} onRequestClose={closeLoginModal}>
         <LoginForm closeModal={closeLoginModal} />
       </BasicModal>
-
       <BasicModal isOpen={isRegModalOpen} onRequestClose={closeRegModal}>
         <RegistrationForm closeModal={closeRegModal} />
       </BasicModal>

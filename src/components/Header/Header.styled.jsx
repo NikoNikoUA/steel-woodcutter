@@ -18,13 +18,21 @@ export const Nav = styled.nav`
     max-width: 1440px;
     align-items: center;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 `;
 
 export const Logo = styled.p`
+  padding: 20px 0;
+
+  @media screen and (min-width: 320px) {
+    display: none;
+  }
+
   @media screen and (min-width: 1440px) {
     margin-right: 100px;
+    display: block;
+    padding: 40px 0;
   }
 `;
 
@@ -35,7 +43,7 @@ export const PagesList = styled.ul`
   gap: 28px;
 
   @media screen and (min-width: 1440px) {
-    margin-right: auto;
+    flex-grow: 1;
   }
 `;
 
@@ -55,8 +63,12 @@ export const ListItem = styled.li`
   font-weight: 600;
   font-size: 18px;
   line-height: 1.25;
-  padding: 40px 0;
+  padding: 20px 0;
   transition: font-weight 100ms ease-in-out;
+
+  @media screen and (min-width: 1440px) {
+    padding: 40px 0;
+  }
 
   & .active {
     color: ${(props) => props.theme.colors.mainColor};
@@ -71,7 +83,19 @@ export const ListItem = styled.li`
     height: 3px;
     background-color: ${(props) => props.theme.colors.mainColor};
     border-radius: 2px;
-    bottom: 30px;
+    bottom: 10px;
     left: 0;
+  }
+`;
+
+export const MobileAuthInfo = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    margin-right: auto;
+    justify-content: flex-start;
   }
 `;
