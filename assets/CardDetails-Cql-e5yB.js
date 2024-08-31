@@ -1,4 +1,4 @@
-var In=Object.defineProperty;var Mn=(e,t,r)=>t in e?In(e,t,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[t]=r;var Oe=(e,t,r)=>(Mn(e,typeof t!="symbol"?t+"":t,r),r);import{d as ge,R as Mt,r as v,h as Ie,j as T,i as _n,M as zr,k as jn,s as Fn,n as zn,f as Dn,o as Nn,p as Ln}from"./index-C9QAlybP.js";const Vn=ge.div`
+var In=Object.defineProperty;var Mn=(e,t,r)=>t in e?In(e,t,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[t]=r;var Oe=(e,t,r)=>(Mn(e,typeof t!="symbol"?t+"":t,r),r);import{d as ge,R as Mt,r as v,h as Ie,j as T,i as _n,M as zr,k as jn,s as Fn,n as zn,f as Dn,o as Nn,p as Ln}from"./index-B5d4dTkc.js";const Vn=ge.div`
   position: relative;
   border-radius: 5px;
 
@@ -127,7 +127,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   bottom: auto;
   transform: translate(-50%, -50%);
   padding: 64px;
-  border: 1px solid ${e=>e.theme.colors.themeOrange};
+  border: 1px solid black;
 `,lc=ge.div`
   display: flex;
   flex-direction: column;
@@ -153,14 +153,14 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   top: 20px;
 
   & > svg {
-    stroke: ${e=>e.theme.colors.mainColor};
+    stroke: ${e=>e.theme.colors.darkColor};
     transition: all 250ms ease;
   }
 
   transition: all 250ms ease;
 
   &:hover {
-    background-color: ${e=>e.theme.colors.mainColor};
+    background-color: rgba(0, 0, 0, 0.3);
 
     & > svg {
       stroke: white;
