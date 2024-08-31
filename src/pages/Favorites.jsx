@@ -4,6 +4,7 @@ import { fetchAllFavorites } from "../utils/api";
 import { Card } from "../components/Card/Card";
 import { BasicModal } from "../components/Modal/Modal";
 import { CardDetails } from "../components/CardDetails/CardDetails";
+import { Link } from "react-router-dom";
 
 const Favorites = () => {
   const [favorites, setFavorites] = useState([]);
@@ -43,18 +44,44 @@ const Favorites = () => {
 
   return (
     <Section>
-      <Container>
-        <ListStyling>
-          {favorites.map((favorite) => (
-            <li key={favorite._id}>
-              <Card
-                product={favorite}
-                openModal={() => openModal(favorite)}
-                onFavRemove={handleRemoveFavorite}
-              />
-            </li>
-          ))}
-        </ListStyling>
+      <Container aria-hidden="false">
+        {favorites && favorites.length > 0 ? (
+          <ListStyling>
+            {favorites.map((favorite) => (
+              <li key={favorite._id}>
+                <Card
+                  product={favorite}
+                  openModal={() => openModal(favorite)}
+                  onFavRemove={handleRemoveFavorite}
+                />
+              </li>
+            ))}
+          </ListStyling>
+        ) : (
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              marginTop: "30px",
+            }}
+          >
+            <p
+              style={{
+                fontSize: "30px",
+              }}
+            >
+              Список порожній. Перейдіть в&nbsp;
+              <Link
+                style={{ textDecoration: "underline", fontWeight: "bold" }}
+                to="/categories"
+              >
+                Категорії
+              </Link>{" "}
+              щоб додати до улюблених
+            </p>
+          </div>
+        )}
         {selectedProduct && (
           <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
             <CardDetails product={selectedProduct} />

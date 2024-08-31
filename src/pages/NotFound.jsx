@@ -9,19 +9,20 @@ const NotFound = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
-            marginTop: "20vh",
-            fontSize: "30px",
+            justifyContent: "flex-start",
+            marginTop: "30px",
           }}
         >
-          Сторінку не знайдено. Будь ласка, поверніться на&nbsp;
-          <Link
-            style={{ textDecoration: "underline", fontWeight: "bold" }}
-            to="/"
-          >
-            {" "}
-            Домашню сторінку
-          </Link>
+          <p style={{ fontSize: "30px" }}>
+            Сторінку не знайдено. Будь ласка, поверніться на
+            <Link
+              style={{ textDecoration: "underline", fontWeight: "bold" }}
+              to="/"
+            >
+              {" "}
+              Домашню сторінку
+            </Link>
+          </p>
         </div>
       </Container>
     </Section>

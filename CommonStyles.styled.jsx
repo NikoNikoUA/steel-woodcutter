@@ -33,6 +33,6 @@ export const ListStyling = styled.ul`
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 `;
