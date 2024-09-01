@@ -1,15 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Container, ListStyling, Section } from "../../CommonStyles.styled";
 import { fetchAllFavorites } from "../utils/api";
 import { Card } from "../components/Card/Card";
 import { BasicModal } from "../components/Modal/Modal";
 import { CardDetails } from "../components/CardDetails/CardDetails";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { BackLink } from "../components/BackLink/BackLink";
 
 const Favorites = () => {
   const [favorites, setFavorites] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const location = useLocation();
+  const backLinkHref = useRef(location.state?.from ?? "/categories");
 
   const openModal = (product) => {
     setSelectedProduct(product);
@@ -45,6 +48,7 @@ const Favorites = () => {
   return (
     <Section>
       <Container aria-hidden="false">
+        <BackLink to={backLinkHref.current} />
         {favorites && favorites.length > 0 ? (
           <ListStyling>
             {favorites.map((favorite) => (
