@@ -26,7 +26,7 @@ export const Section = styled.section`
 export const ListStyling = styled.ul`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;

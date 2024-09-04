@@ -1,12 +1,20 @@
 import React from "react";
 
-import { CardContainer, Img, TextInfo, HeartContainer } from "./Card.styled";
+import {
+  CardContainer,
+  Img,
+  TextInfo,
+  HeartContainer,
+  ItemInfoCardDiv,
+  ButtonsCardDiv,
+  CardButton,
+} from "./Card.styled";
 import { HeartIcon } from "../HeartIcon/HeartIcon";
 
 export const Card = ({ product, openModal, onFavRemove }) => {
   const BASE_URL = "http://localhost:3000";
 
-  const { name, price, url, id } = product;
+  const { name, price, url, id, quantity } = product;
 
   return (
     <>
@@ -16,13 +24,17 @@ export const Card = ({ product, openModal, onFavRemove }) => {
           <HeartIcon product={product} id={id} onFavRemove={onFavRemove} />
         </HeartContainer>
         <TextInfo>
-          <h2>{name}</h2>
-          <h3>Ціна: {price} ГРН</h3>
-
-          <button type="button" onClick={openModal}>
-            Читати більше
-          </button>
-          <button>Замовити</button>
+          <ItemInfoCardDiv>
+            <h2>{name}</h2>
+            <p>Ціна: {price} UAH</p>
+            <p>В наявності: {quantity}</p>
+          </ItemInfoCardDiv>
+          <ButtonsCardDiv>
+            <CardButton type="button" onClick={openModal}>
+              Читати більше
+            </CardButton>
+            <CardButton>Замовити</CardButton>
+          </ButtonsCardDiv>
         </TextInfo>
       </CardContainer>
     </>

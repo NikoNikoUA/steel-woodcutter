@@ -58,7 +58,7 @@ export const Valentine = () => {
           </ListStyling>
           {selectedProduct && (
             <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
-              <CardDetails product={selectedProduct} />
+              <CardDetails product={selectedProduct} closeModal={closeModal} />
             </BasicModal>
           )}
         </Container>

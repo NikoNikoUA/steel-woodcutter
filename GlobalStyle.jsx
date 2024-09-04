@@ -5,7 +5,7 @@ export const Globalstyle = createGlobalStyle`
 
 body {
   margin: 0 auto;
-  /* background-color: rgb(254,255,227); */
+ 
     background-color: white;
     height: 100%;
 
@@ -22,13 +22,13 @@ body {
 
  
   ::-webkit-scrollbar-thumb {
-    background: rgb(251, 233, 186); 
+    background: rgb(48, 48, 223); 
     border-radius: 12px; 
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(251, 233, 186, 0.8); 
+    background: rgb(111, 111, 217); 
   }
 
 

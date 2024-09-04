@@ -85,6 +85,10 @@ export const ListItem = styled.li`
     border-radius: 2px;
     bottom: 10px;
     left: 0;
+
+    @media screen and (min-width: 1440px) {
+      bottom: 25px;
+    }
   }
 `;
 

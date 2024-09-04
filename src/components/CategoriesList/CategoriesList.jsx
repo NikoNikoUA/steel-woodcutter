@@ -5,7 +5,7 @@ export const CategoriesList = () => {
   return (
     <Section>
       <Container>
-        <ListStyling>
+        <ListStyling style={{ alignItems: "center" }}>
           <CategoryItem>
             <StyledLink to="/categories/easter">Пасха</StyledLink>
           </CategoryItem>
