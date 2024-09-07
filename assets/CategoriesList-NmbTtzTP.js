@@ -1,4 +1,4 @@
-import{d as s,N as i,j as e,S as n,C as a,a as c}from"./index-CgKh-dIY.js";const o=s(i)`
+import{d as s,N as i,j as e,S as n,C as a,a as c}from"./index-ByD4tm6R.js";const o=s(i)`
   color: ${t=>t.theme.colors.mainColor};
   transition: color 250ms ease-in-out;
 
