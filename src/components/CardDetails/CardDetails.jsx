@@ -9,7 +9,7 @@ import {
 
 export const CardDetails = ({ product, closeModal }) => {
   const { name, category, url, material, dimensions, description } = product;
-  const BASE_URL = "http://localhost:3000";
+  const BASE_URL = "https://backend-steel-woodcutter.onrender.com";
 
   return (
     <CardDetailContainer>
