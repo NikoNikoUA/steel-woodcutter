@@ -44,7 +44,7 @@ export const Miscellaneous = () => {
       <Section>
         <Container>
           <BackLink to={backLinkHref.current} />
-          <div>Miscellaneous</div>
+
           <ListStyling>
             {miscellaneousProducts.map((miscellaneousProduct) => (
               <li key={miscellaneousProduct._id}>

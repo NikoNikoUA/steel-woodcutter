@@ -1,29 +1,44 @@
 import {
+  CardButton,
+  GoodName,
+  HeartContainer,
+  TextDecor,
+} from "../Card/Card.styled";
+import { HeartIcon } from "../HeartIcon/HeartIcon";
+import {
   Img,
   CardDetailContainer,
   Highlight,
   CloseBtn,
   StyledCloseIcon,
   CardDetailsInfoContainer,
+  HeartContainerReadMore,
 } from "./CardDetails.styled";
 
-export const CardDetails = ({ product, closeModal }) => {
-  const { name, category, url, material, dimensions, description } = product;
-  const BASE_URL = "https://backend-steel-woodcutter.onrender.com";
+export const CardDetails = ({ product, closeModal, id, onFavRemove }) => {
+  const { name, category, url, material, dimensions, description, price } =
+    product;
+  // const BASE_URL = "https://backend-steel-woodcutter.onrender.com";
+  const BASE_URL = "http://localhost:3000";
 
   return (
     <CardDetailContainer>
+      <HeartContainerReadMore>
+        <HeartIcon product={product} id={id} onFavRemove={onFavRemove} />
+      </HeartContainerReadMore>
       <CloseBtn type="button" onClick={closeModal}>
         <StyledCloseIcon />
       </CloseBtn>
+
       <div>
         <Img alt={name} src={`${BASE_URL}${url}`} />
       </div>
       <CardDetailsInfoContainer>
-        <h2>{name}</h2>
-        <p>
+        <GoodName>{name}</GoodName>
+        <TextDecor>{price}.00 &#8372;</TextDecor>
+        <TextDecor>
           <Highlight>Категорія:</Highlight> {category}
-        </p>
+        </TextDecor>
         {/* <p>
         {category.map((cat, index) => (
           <span key={index}>
@@ -32,9 +47,9 @@ export const CardDetails = ({ product, closeModal }) => {
           </span>
         ))}
       </p> */}
-        <p>
+        <TextDecor>
           <Highlight>Матеріал:</Highlight> {material}
-        </p>
+        </TextDecor>
         <ul>
           {Array.isArray(dimensions) ? (
             dimensions.map((dimension, index) => (
@@ -44,7 +59,8 @@ export const CardDetails = ({ product, closeModal }) => {
             <li>No dimensions available</li>
           )}
         </ul>
-        <p>{description}</p>
+        <TextDecor>{description}</TextDecor>
+        <CardButton>Замовити</CardButton>
       </CardDetailsInfoContainer>
     </CardDetailContainer>
   );

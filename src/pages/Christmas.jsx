@@ -46,7 +46,7 @@ export const Christmas = () => {
       <Section>
         <Container>
           <BackLink to={backLinkHref.current} />
-          <div>Christmas</div>
+
           <ListStyling>
             {christmasProducts.map((christmasProduct) => (
               <li key={christmasProduct._id}>

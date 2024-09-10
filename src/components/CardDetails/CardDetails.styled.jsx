@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { IoClose } from "react-icons/io5";
 
 export const StyledCloseIcon = styled(IoClose)`
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
   transition: all 250ms ease;
   fill: ${(props) => props.theme.colors.mainColor};
 
@@ -24,6 +24,7 @@ export const Img = styled.img`
 
 export const Highlight = styled.span`
   font-weight: 500;
+  color: black;
 `;
 
 export const CardDetailContainer = styled.div`
@@ -35,19 +36,20 @@ export const CardDetailContainer = styled.div`
   gap: 10px;
 
   @media screen and (min-width: 1440px) {
-    flex-direction: row;
+    /* flex-direction: row; */
   }
 `;
 
 export const CloseBtn = styled.button`
   background-color: transparent;
   border: none;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   position: absolute;
   right: 5px;
@@ -56,9 +58,6 @@ export const CloseBtn = styled.button`
   transition: all 250ms ease;
 
   @media screen and (min-width: 768px) {
-    height: 40px;
-    width: 40px;
-
     right: 10px;
     top: 10px;
 
@@ -78,4 +77,19 @@ export const CardDetailsInfoContainer = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   gap: 15px;
+`;
+
+export const HeartContainerReadMore = styled.div`
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  @media screen and (min-width: 768px) {
+    top: 10px;
+    right: 10px;
+  }
+  @media screen and (min-width: 1440px) {
+    top: 5px;
+    right: 5px;
+  }
 `;

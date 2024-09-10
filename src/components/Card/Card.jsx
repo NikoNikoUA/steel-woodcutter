@@ -8,13 +8,18 @@ import {
   ItemInfoCardDiv,
   ButtonsCardDiv,
   CardButton,
+  TextDecor,
+  GoodName,
 } from "./Card.styled";
 import { HeartIcon } from "../HeartIcon/HeartIcon";
 
 export const Card = ({ product, openModal, onFavRemove }) => {
-  const BASE_URL = "https://backend-steel-woodcutter.onrender.com";
+  // const BASE_URL = "https://backend-steel-woodcutter.onrender.com";
+  const BASE_URL = "http://localhost:3000";
 
   const { name, price, url, id, quantity } = product;
+
+  // const imageUrl = url.startsWith("http") ? url : `${BASE_URL}${url}`;
 
   return (
     <>
@@ -25,9 +30,9 @@ export const Card = ({ product, openModal, onFavRemove }) => {
         </HeartContainer>
         <TextInfo>
           <ItemInfoCardDiv>
-            <h2>{name}</h2>
-            <p>Ціна: {price} UAH</p>
-            <p>В наявності: {quantity}</p>
+            <GoodName>{name}</GoodName>
+            <TextDecor>{price}.00 &#8372;</TextDecor>
+            <TextDecor>Доступно: {quantity}</TextDecor>
           </ItemInfoCardDiv>
           <ButtonsCardDiv>
             <CardButton type="button" onClick={openModal}>

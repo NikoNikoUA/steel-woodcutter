@@ -102,3 +102,13 @@ export const CardButton = styled.button`
     }
   }
 `;
+
+export const TextDecor = styled.p`
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+`;
+
+export const GoodName = styled.h3`
+  font-size: 16px;
+  text-transform: uppercase;
+`;
