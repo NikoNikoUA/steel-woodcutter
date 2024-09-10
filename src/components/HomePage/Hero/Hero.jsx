@@ -10,7 +10,7 @@ export const Hero = () => {
     <HeroSection>
       <TextContainer>
         <MainHeader>Сталевий Лісоруб</MainHeader>
-        <HeroText>Створюємо затишну атмосферу з вами і для вас</HeroText>
+        <HeroText>Краса доступна кожному</HeroText>
       </TextContainer>
     </HeroSection>
   );
