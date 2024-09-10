@@ -18,8 +18,8 @@ import {
 export const CardDetails = ({ product, closeModal, id, onFavRemove }) => {
   const { name, category, url, material, dimensions, description, price } =
     product;
-  // const BASE_URL = "https://backend-steel-woodcutter.onrender.com";
-  const BASE_URL = "http://localhost:3000";
+  const BASE_URL = "https://backend-steel-woodcutter.onrender.com";
+  // const BASE_URL = "http://localhost:3000";
 
   return (
     <CardDetailContainer>

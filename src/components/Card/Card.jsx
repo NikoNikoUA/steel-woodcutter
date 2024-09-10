@@ -14,8 +14,8 @@ import {
 import { HeartIcon } from "../HeartIcon/HeartIcon";
 
 export const Card = ({ product, openModal, onFavRemove }) => {
-  // const BASE_URL = "https://backend-steel-woodcutter.onrender.com";
-  const BASE_URL = "http://localhost:3000";
+  const BASE_URL = "https://backend-steel-woodcutter.onrender.com";
+  // const BASE_URL = "http://localhost:3000";
 
   const { name, price, url, id, quantity } = product;
 

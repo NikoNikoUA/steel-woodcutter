@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// axios.defaults.baseURL = "https://backend-steel-woodcutter.onrender.com";
-axios.defaults.baseURL = "http://localhost:3000";
+axios.defaults.baseURL = "https://backend-steel-woodcutter.onrender.com";
+// axios.defaults.baseURL = "http://localhost:3000";
 
 const setAuthHeader = (token) => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
