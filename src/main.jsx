@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Provider store={store}>
         <Globalstyle />
         <PersistGate loading={null} persistor={persistor}>
-          <BrowserRouter basename="/steel-woodcutter/">
+          <BrowserRouter>
             <App />
           </BrowserRouter>
         </PersistGate>
