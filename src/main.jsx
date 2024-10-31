@@ -22,11 +22,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Provider store={store}>
         <Globalstyle />
         <PersistGate loading={null} persistor={persistor}>
-          <BrowserRouter basename="/steel-woodcutter">
+          <BrowserRouter basename="/steel-woodcutter/">
             <App />
           </BrowserRouter>
         </PersistGate>
       </Provider>
     </ThemeProvider>
   </React.StrictMode>
-)
+);
