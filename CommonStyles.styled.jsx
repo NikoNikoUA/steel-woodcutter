@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
 
 export const Container = styled.div`
   margin-left: auto;
@@ -34,5 +37,52 @@ export const ListStyling = styled.ul`
   @media screen and (min-width: 768px) {
     flex-direction: row;
     justify-content: flex-start;
+  }
+`;
+
+export const BasicCardModal = styled(Modal)`
+  overflow-y: scroll;
+  position: relative;
+  border-radius: 12px;
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+
+  border: 1px solid ${(props) => props.theme.colors.darkColor};
+
+  @media screen and (min-width: 768px) {
+    padding: 40px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 1000px;
+  }
+`;
+
+export const AuthModals = styled(Modal)`
+  overflow-y: scroll;
+  position: relative;
+  border-radius: 12px;
+  width: 280px;
+  height: 400px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+
+  border: 1px solid ${(props) => props.theme.colors.darkColor};
+
+  @media screen and (min-width: 768px) {
+    padding: 40px;
+    width: 400px;
   }
 `;

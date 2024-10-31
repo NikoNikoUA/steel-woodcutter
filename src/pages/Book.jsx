@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { BackLink } from "../components/BackLink/BackLink";
 import { fetchBookProducts } from "../utils/api";
 import { BasicModal } from "../components/Modal/Modal";
-import { Container, Section } from "../../CommonStyles.styled";
+import { BasicCardModal, Container, Section } from "../../CommonStyles.styled";
 import { CategoriesList } from "../components/CategoriesList/CategoriesList";
 
 export const Book = () => {
@@ -56,10 +56,10 @@ export const Book = () => {
             ))}
           </ul>
           {selectedProduct && (
-            <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
+            <BasicCardModal isOpen={isModalOpen} onRequestClose={closeModal}>
               <div>{selectedProduct.name}</div>
               <div>{selectedProduct.description}</div>
-            </BasicModal>
+            </BasicCardModal>
           )}
         </Container>
       </Section>

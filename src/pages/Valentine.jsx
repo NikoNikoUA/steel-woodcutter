@@ -5,7 +5,12 @@ import { fetchValentineProducts } from "../utils/api";
 import { Card } from "../components/Card/Card";
 import { BasicModal } from "../components/Modal/Modal";
 import { CardDetails } from "../components/CardDetails/CardDetails";
-import { Container, ListStyling, Section } from "../../CommonStyles.styled";
+import {
+  BasicCardModal,
+  Container,
+  ListStyling,
+  Section,
+} from "../../CommonStyles.styled";
 import { CategoriesList } from "../components/CategoriesList/CategoriesList";
 
 export const Valentine = () => {
@@ -57,9 +62,9 @@ export const Valentine = () => {
             ))}
           </ListStyling>
           {selectedProduct && (
-            <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
+            <BasicCardModal isOpen={isModalOpen} onRequestClose={closeModal}>
               <CardDetails product={selectedProduct} closeModal={closeModal} />
-            </BasicModal>
+            </BasicCardModal>
           )}
         </Container>
       </Section>

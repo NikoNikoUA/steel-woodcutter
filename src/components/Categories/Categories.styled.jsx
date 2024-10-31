@@ -67,3 +67,16 @@ export const CategoryImg = styled.img`
     }
   }
 `;
+
+// export const CategoryImgBook = styled.img`
+//   width: 560px;
+//   height: 640px;
+//   opacity: 0.5;
+//   transition: opacity 0.5s ease-out;
+
+//   @media screen and (min-width: 1440px) {
+//     &:hover {
+//       opacity: 1;
+//     }
+//   }
+// `;

@@ -12,6 +12,7 @@ import {
   RegLogSvgContainer,
 } from "./AuthUser.styled.jsx";
 import { GiAxeInLog } from "react-icons/gi";
+import { AuthModals } from "../../../../CommonStyles.styled.jsx";
 
 export const AuthUser = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -61,12 +62,12 @@ export const AuthUser = () => {
           </AuthList>
         </RegLogSvgContainer>
       </MobileAuthContainer>
-      <BasicModal isOpen={isLoginModalOpen} onRequestClose={closeLoginModal}>
+      <AuthModals isOpen={isLoginModalOpen} onRequestClose={closeLoginModal}>
         <LoginForm closeModal={closeLoginModal} />
-      </BasicModal>
-      <BasicModal isOpen={isRegModalOpen} onRequestClose={closeRegModal}>
+      </AuthModals>
+      <AuthModals isOpen={isRegModalOpen} onRequestClose={closeRegModal}>
         <RegistrationForm closeModal={closeRegModal} />
-      </BasicModal>
+      </AuthModals>
     </AuthContainer>
   );
 };

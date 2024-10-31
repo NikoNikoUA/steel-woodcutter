@@ -5,7 +5,12 @@ import { fetchMiscellaneousProducts } from "../utils/api";
 import { Card } from "../components/Card/Card";
 import { BasicModal } from "../components/Modal/Modal";
 import { CardDetails } from "../components/CardDetails/CardDetails";
-import { Container, ListStyling, Section } from "../../CommonStyles.styled";
+import {
+  BasicCardModal,
+  Container,
+  ListStyling,
+  Section,
+} from "../../CommonStyles.styled";
 import { CategoriesList } from "../components/CategoriesList/CategoriesList";
 
 export const Miscellaneous = () => {
@@ -42,7 +47,7 @@ export const Miscellaneous = () => {
     <>
       <CategoriesList />
       <Section>
-        <Container>
+        <Container aria-hidden="false">
           <BackLink to={backLinkHref.current} />
 
           <ListStyling>
@@ -56,9 +61,9 @@ export const Miscellaneous = () => {
             ))}
           </ListStyling>
           {selectedProduct && (
-            <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
+            <BasicCardModal isOpen={isModalOpen} onRequestClose={closeModal}>
               <CardDetails product={selectedProduct} closeModal={closeModal} />
-            </BasicModal>
+            </BasicCardModal>
           )}
         </Container>
       </Section>

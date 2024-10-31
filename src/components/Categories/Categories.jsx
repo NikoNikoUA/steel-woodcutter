@@ -5,6 +5,7 @@ import {
   CategoryImg,
   CategoryHeading,
   CategoryItem,
+  // CategoryImgBook,
 } from "./Categories.styled";
 import easter from "../../../public/categories-images/easter.jpg";
 import christmas from "../../../public/categories-images/christmas.jpg";

@@ -1,11 +1,15 @@
 import { useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { BackLink } from "../components/BackLink/BackLink";
-import { Container, ListStyling, Section } from "../../CommonStyles.styled";
+import {
+  Container,
+  ListStyling,
+  Section,
+  BasicCardModal,
+} from "../../CommonStyles.styled";
 import { useEffect, useState } from "react";
 import { Card } from "../components/Card/Card";
 import { CardDetails } from "../components/CardDetails/CardDetails";
-import { BasicModal } from "../components/Modal/Modal";
 import { fetchEasterProducts } from "../utils/api";
 import { CategoriesList } from "../components/CategoriesList/CategoriesList";
 
@@ -58,9 +62,9 @@ export const Easter = () => {
             ))}
           </ListStyling>
           {selectedProduct && (
-            <BasicModal isOpen={isModalOpen} onRequestClose={closeModal}>
+            <BasicCardModal isOpen={isModalOpen} onRequestClose={closeModal}>
               <CardDetails product={selectedProduct} closeModal={closeModal} />
-            </BasicModal>
+            </BasicCardModal>
           )}
         </Container>
       </Section>

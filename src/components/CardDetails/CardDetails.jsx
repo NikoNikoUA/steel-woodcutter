@@ -1,9 +1,4 @@
-import {
-  CardButton,
-  GoodName,
-  HeartContainer,
-  TextDecor,
-} from "../Card/Card.styled";
+import { TextDecor } from "../Card/Card.styled";
 import { HeartIcon } from "../HeartIcon/HeartIcon";
 import {
   Img,
@@ -13,13 +8,16 @@ import {
   StyledCloseIcon,
   CardDetailsInfoContainer,
   HeartContainerReadMore,
+  GoodNameCardDetail,
+  TextDecorCardDetails,
+  CardButtonDetails,
 } from "./CardDetails.styled";
 
 export const CardDetails = ({ product, closeModal, id, onFavRemove }) => {
   const { name, category, url, material, dimensions, description, price } =
     product;
-  const BASE_URL = "https://backend-steel-woodcutter.onrender.com";
-  // const BASE_URL = "http://localhost:3000";
+  // const BASE_URL = "https://backend-steel-woodcutter.onrender.com";
+  const BASE_URL = "http://localhost:3000";
 
   return (
     <CardDetailContainer>
@@ -34,8 +32,8 @@ export const CardDetails = ({ product, closeModal, id, onFavRemove }) => {
         <Img alt={name} src={`${BASE_URL}${url}`} />
       </div>
       <CardDetailsInfoContainer>
-        <GoodName>{name}</GoodName>
-        <TextDecor>{price}.00 &#8372;</TextDecor>
+        <GoodNameCardDetail>{name}</GoodNameCardDetail>
+        <TextDecorCardDetails>{price}.00 &#8372;</TextDecorCardDetails>
         <TextDecor>
           <Highlight>Категорія:</Highlight> {category}
         </TextDecor>
@@ -60,7 +58,7 @@ export const CardDetails = ({ product, closeModal, id, onFavRemove }) => {
           )}
         </ul>
         <TextDecor>{description}</TextDecor>
-        <CardButton>Замовити</CardButton>
+        <CardButtonDetails>Замовити</CardButtonDetails>
       </CardDetailsInfoContainer>
     </CardDetailContainer>
   );

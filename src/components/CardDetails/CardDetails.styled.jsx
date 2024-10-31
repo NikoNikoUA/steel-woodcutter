@@ -16,10 +16,6 @@ export const StyledCloseIcon = styled(IoClose)`
 export const Img = styled.img`
   border-radius: 5px;
   width: 100%;
-
-  @media screen and (min-width: 1440px) {
-    width: 320px;
-  }
 `;
 
 export const Highlight = styled.span`
@@ -76,7 +72,7 @@ export const CardDetailsInfoContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 15px;
+  gap: 20px;
 `;
 
 export const HeartContainerReadMore = styled.div`
@@ -91,5 +87,54 @@ export const HeartContainerReadMore = styled.div`
   @media screen and (min-width: 1440px) {
     top: 5px;
     right: 5px;
+  }
+`;
+
+export const GoodNameCardDetail = styled.h3`
+  font-size: 24px;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
+`;
+
+export const TextDecorCardDetails = styled.p`
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+`;
+
+export const CardButtonDetails = styled.button`
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: ${(props) => props.theme.colors.mainColor};
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 250ms ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 100%;
+    &:hover {
+      background-color: transparent;
+      color: ${(props) => props.theme.colors.darkColor};
+    }
   }
 `;
