@@ -30,7 +30,6 @@ export const CategoryHeading = styled.p`
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   bottom: 0;
   left: 50%;
-  box-sizing: border-box;
   transform: translateX(-50%);
   text-align: center;
   padding: 16px;
@@ -49,7 +48,6 @@ export const CategoryHeading = styled.p`
 export const CategoryItem = styled.li`
   position: relative;
   overflow: hidden;
-  height:100%;
   border-radius: 4px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   transition: all 250ms ease;
@@ -97,16 +95,3 @@ export const CategoryImg = styled.img`
     }
   }
 `;
-
-// export const CategoryImgBook = styled.img`
-//   width: 560px;
-//   height: 640px;
-//   opacity: 0.5;
-//   transition: opacity 0.5s ease-out;
-
-//   @media screen and (min-width: 1440px) {
-//     &:hover {
-//       opacity: 1;
-//     }
-//   }
-// `;
