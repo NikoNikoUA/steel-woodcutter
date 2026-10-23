@@ -24,6 +24,12 @@ export const Container = styled.div`
 
 export const Section = styled.section`
   padding: 30px 0;
+
+  &.our-works {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
 `;
 
 export const ListStyling = styled.ul`
