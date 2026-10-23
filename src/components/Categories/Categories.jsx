@@ -24,7 +24,7 @@ export const Category = () => {
                 alt="image of wooden rabbits"
                 src={easter}
                 loading="lazy"
-                class="easter"
+                className="easter"
               />
               <CategoryHeading>Пасха</CategoryHeading>
             </Link>
@@ -35,7 +35,7 @@ export const Category = () => {
                 alt="image of a metal angel"
                 src={christmas}
                 loading="lazy"
-                class="christmas"
+                className="christmas"
               />
               <CategoryHeading>Різдво</CategoryHeading>
             </Link>
@@ -46,7 +46,7 @@ export const Category = () => {
                 alt="image of a wooden model of hyppos"
                 src={valentine}
                 loading="lazy"
-                class="valentine"
+                className="valentine"
               />
               <CategoryHeading>День Валентина</CategoryHeading>
             </Link>
@@ -57,7 +57,7 @@ export const Category = () => {
                 alt="image of a wooden model of hyppos"
                 src={miscellaneous}
                 loading="lazy"
-                class="miscellaneous"
+                className="miscellaneous"
               />
               <CategoryHeading>Різне</CategoryHeading>
             </Link>
@@ -68,7 +68,7 @@ export const Category = () => {
                 alt="image of a wooden model of hyppos"
                 src={book}
                 loading="lazy"
-                class="book"
+                className="book"
               />
               <CategoryHeading>Книга</CategoryHeading>
             </Link>

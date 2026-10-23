@@ -19,6 +19,7 @@ export const fetchEasterProducts = async () => {
 
 export const fetchValentineProducts = async () => {
   const response = await axios.get("/api/valentine-products/");
+  console.log(response.data);
   return response.data;
 };
 
